@@ -42,7 +42,7 @@ if __name__ == "__main__":
 			"curated/recipe_dataset.zh-Hans.json",
 			production_clock_speed=250,
 			resource_extraction_clock_speed=250,
-			with_somersloop=True,
+			with_somersloop=with_somersloop,
 		)
 
 		for allow_plutonium_sink in [True, False]:
