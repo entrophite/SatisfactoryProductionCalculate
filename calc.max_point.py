@@ -30,18 +30,20 @@ class MaxPointCalculator(calc_lib.ProductionCalculator):
 
 
 if __name__ == "__main__":
-	for clock_speed in [1, 100, 250]:
-		recipe_matrix = calc_lib.RecipeMatrix.from_curated_recipe_dataset_json(
-			"curated/recipe_dataset.zh-Hans.json",
-			production_clock_speed=clock_speed,
-			resource_extraction_clock_speed=250,
-			with_somersloop=True,
-		)
+	for with_somersloop in [False, True]:
+		for clock_speed in [1, 100, 250]:
+			recipe_matrix = calc_lib.RecipeMatrix.from_curated_recipe_dataset_json(
+				"curated/recipe_dataset.zh-Hans.json",
+				production_clock_speed=clock_speed,
+				resource_extraction_clock_speed=250,
+				with_somersloop=with_somersloop,
+			)
 
-		calculator = MaxPointCalculator(recipe_matrix)
-		calculator.calculate()
-		fname = ("output/calc.max_point.oc_{}.with_sloop.txt").format(
-			clock_speed
-		)
-		with open(fname, "w") as fp:
-			calculator.report(fp)
+			calculator = MaxPointCalculator(recipe_matrix)
+			calculator.calculate()
+			fname = ("output/calc.max_point.oc_{}.{}.txt").format(
+				clock_speed,
+				"with_sloop" if with_somersloop else "wo_sloop",
+			)
+			with open(fname, "w") as fp:
+				calculator.report(fp)
