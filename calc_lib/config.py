@@ -5,6 +5,7 @@
 # curator configs, related to game's docs.json specifically
 # may need update after game updates
 CURATOR_ITEM_AMOUNT_PAIR_REGEX = r"\(ItemClass=\"([^()]+)\",Amount=(\d+)\)"
+CURATOR_ENCLOSED_ARRAY_REGEX = r"\(([^,]*,?)\)"
 
 CURATOR_NATIVE_CLASSNAME_LIST_RECIPE = [
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGRecipe'"
@@ -20,6 +21,7 @@ CURATOR_NATIVE_CLASSNAME_LIST_ITEM = [
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGEquipmentDescriptor'",
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGPowerShardDescriptor'",
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGAmmoTypeSpreadshot'",
+	"/Script/CoreUObject.Class'/Script/FactoryGame.FGItemDescriptorPowerBoosterFuel'",
 ]
 
 CURATOR_NATIVE_CLASSNAME_LIST_BUILDING = [
@@ -37,6 +39,10 @@ CURATOR_NATIVE_CLASSNAME_LIST_BUILDING = [
 CURATOR_NATIVE_CLASSNAME_LIST_GENERATOR = [
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGBuildableGeneratorFuel'",
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGBuildableGeneratorNuclear'",
+]
+
+CURATOR_NATIVE_CLASSNAME_LIST_POWERBOOSTER = [
+	"/Script/CoreUObject.Class'/Script/FactoryGame.FGBuildablePowerBooster'",
 ]
 
 CURATOR_NATIVE_CLASSNAME_RESOURCE_SHORT = "FGResourceDescriptor"
@@ -191,9 +197,13 @@ DEFAULT_RESOURCE_WEIGHT_CONFIG = {
 	"Desc_Water_C": 0.0,  # infinite/min (water)
 }
 
-# total amount of somersloop in the game, can be get from:
+# total amount of somersloop in the game, can get from:
 # https://satisfactory.wiki.gg/wiki/Somersloop
 SOMERSLOOP_GLOBAL_LIMIT = 106
+
+POWER_BOOST_BUILDING_LIST = [
+	"Build_AlienPowerBuilding_C",
+]
 
 ################################################################################
 # resource converter recipes

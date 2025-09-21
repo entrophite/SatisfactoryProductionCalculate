@@ -109,11 +109,15 @@ class RecipeMatrix(object):
 			if with_somersloop else range(0, 1)  # essentially only [0]
 
 		# list of clock speed to consider
-		if recipe.is_resource_proxy:
-			clock_speeds = [resource_clock_speed]
+		if not recipe.overclockable:
+			clock_speeds = [ClockSpeed(100)]
 		else:
-			# always consider 250%
-			clock_speeds = list({production_clock_speed, ClockSpeed(250)})
+			if recipe.is_resource_proxy:
+				# also ensures there is only one clock speed for resources
+				clock_speeds = [resource_clock_speed]
+			else:
+				# always consider 250%
+				clock_speeds = list({production_clock_speed, ClockSpeed(250)})
 
 		# add a row for each somersloop count
 		for somersloop, clock_speed in itertools.product(somersloops, clock_speeds):

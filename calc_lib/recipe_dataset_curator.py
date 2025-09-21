@@ -16,6 +16,14 @@ class RecipeDatasetCurator(RecipeDataset):
 		return s.split("'")[-2].split(".")[-1]
 
 	@staticmethod
+	def _parse_enclosed_array(s: str) -> list[str]:
+		m = re.match(config.CURATOR_ENCLOSED_ARRAY_REGEX, s)
+		if not m:
+			raise ValueError(f"failed to parse enclosed array: {s}")
+		ret = [v.strip("\"") for v in m.groups()]
+		return ret
+
+	@staticmethod
 	def _parse_item_amount_pair_array(s: str) -> dict:
 		# m = re.match(r"^\(?(\(ItemClass=\"([^()]+)\",Amount=(\d+)\),?)*\)?$", s)
 		# if m is None:
@@ -106,6 +114,7 @@ class RecipeDatasetCurator(RecipeDataset):
 		ret._curate_recipes(data)
 		# these must be called after the above three
 		# some already-parsed data might be used to create these recipes
+		ret._add_apa_building_and_proxy_recipes(data)
 		ret._add_generator_proxy_recipes(data)
 		ret._add_resource_proxy_recipes(data)
 		# calculate sink points gain for all recipes
@@ -170,6 +179,55 @@ class RecipeDatasetCurator(RecipeDataset):
 					)
 
 					self.add(recipe)
+		return
+
+	def _add_apa_building_and_proxy_recipes(self, data: dict[str, dict[str]]
+	) -> None:
+		for d in config.CURATOR_NATIVE_CLASSNAME_LIST_POWERBOOSTER:
+			for powerbooster in data[d]["Classes"]:
+				# building object
+				building = self.CuratedBuilding(
+					classname=powerbooster["ClassName"],
+					display_name=powerbooster["mDisplayName"],
+					power_production=float(powerbooster["mBasePowerProduction"]),
+					base_power_boost=float(powerbooster["mBaseBoostPercentage"]),
+					# not in docs.json, or i don't know how to calculate it
+					fueled_power_boost=0.3,  # so hard-codede
+				)
+				self.add(building)
+
+				# unfueled recipe
+				recipe = self.CuratedRecipe(
+					classname=f"{powerbooster['ClassName']}-Unfueled",
+					display_name=f"{powerbooster['mDisplayName']} (Unfueled)",
+					ingredients=dict(),
+					products=dict(),
+					manufacturing_duration=1.0,
+					produced_in=[powerbooster["ClassName"]],
+					global_limit=0,
+					overclockable=False,
+				)
+				self.add(recipe)
+
+				# fueled recipe
+				fuel_classes = [s.split(".")[1] for s in
+					self._parse_enclosed_array(powerbooster["mDefaultFuelClasses"])]
+
+				for itemclass in fuel_classes:
+					item = self.items[itemclass]
+					recipe = self.CuratedRecipe(
+						classname=f"{powerbooster['ClassName']}-{itemclass}",
+						display_name=f"{powerbooster['mDisplayName']} ({item.display_name})",
+						ingredients={itemclass: 1},
+						products=dict(),
+						# not in docs.json, or i don't know how to calculate it
+						manufacturing_duration=12.0,  # so hard-codede
+						produced_in=[powerbooster["ClassName"]],
+						global_limit=0,
+						overclockable=False,
+					)
+					self.add(recipe)
+
 		return
 
 	def _add_resource_proxy_recipes(self, data: dict[str, dict[str]]) -> None:
@@ -284,6 +342,7 @@ class RecipeDatasetCurator(RecipeDataset):
 				produced_in=[generator.classname],
 				global_limit=count,
 				is_resource_proxy=True,
+				overclockable=False,
 			)
 
 			self.add(recipe)

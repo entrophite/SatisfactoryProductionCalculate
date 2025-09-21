@@ -80,6 +80,7 @@ class Recipe(object):
 	raw_sink_points_gain: float = 0.0
 	sinkable_points_gain: float = 0.0
 	is_resource_proxy: bool = False
+	overclockable: bool = True
 
 	def get_manufacturer(self, buildings: dict[str, "Building"],
 	) -> Optional["Building"]:
@@ -133,6 +134,9 @@ class Building(object):
 	# these are for resource extractors only
 	extract_cycle_time: float = 0.0
 	items_per_cycle: int = 0
+	# power-booster (APA) related
+	base_power_boost: float = 0.0
+	fueled_power_boost: float = 0.0
 
 	def get_base_power(self, recipe: Recipe = None) -> float:
 		# report negative = consumption, positive = production

@@ -89,6 +89,7 @@ if __name__ == "__main__":
 		],
 		sloop=[
 			(".with_sloop", "有红石"),
+			(".wo_sloop", "无红石"),
 		],
 	):
 		if not os.path.exists(fname):
