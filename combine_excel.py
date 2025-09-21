@@ -45,8 +45,8 @@ if __name__ == "__main__":
 			(".waste_prone", "有废料"),
 		],
 		sink=[
-			(".sink_pluto", "回收钸"),
-			(".ficsonium", "铀钸镄"),
+			(".sink_pluto", "钚回收"),
+			(".ficsonium", "铀钚镄"),
 		],
 		conv=[
 			("", "允许转化"),
