@@ -226,3 +226,22 @@ RESOURCE_CONVERTER_RECIPE_LIST = [
 	"Recipe_Sulfur_Iron_C",
 	"Recipe_Uranium_Bauxite_C",
 ]
+
+################################################################################
+# buildings that subject to ingredient multiplier
+INGREDIENT_MULTIPLIER_BUILDING_LIST = {
+	"BP_WorkBenchComponent_C",
+	"BP_WorkshopComponent_C",
+	"Build_AssemblerMk1_C",
+	"Build_AutomatedWorkBench_C",
+	"Build_Blender_C",
+	"Build_ConstructorMk1_C",
+	"Build_Converter_C",
+	"Build_FoundryMk1_C",
+	"Build_HadronCollider_C",
+	"Build_ManufacturerMk1_C",
+	"Build_OilRefinery_C",
+	"Build_QuantumEncoder_C",
+	"Build_SmelterMk1_C",
+	"FGBuildableAutomatedWorkBench",
+}

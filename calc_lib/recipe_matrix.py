@@ -15,6 +15,8 @@ class RecipeMatrix(object):
 	def __init__(self, recipe_dataset: RecipeDataset, *ka,
 		production_clock_speed: ClockSpeed = ClockSpeed(100),
 		resource_extraction_clock_speed: ClockSpeed = ClockSpeed(250),
+		ingredient_multiplier: float = 1.0,
+		power_consumption_multiplier: float = 1.0,
 		with_somersloop: bool = False, **kw,
 	) -> None:
 		super().__init__(*ka, **kw)
@@ -23,6 +25,8 @@ class RecipeMatrix(object):
 		self.production_clock_speed: ClockSpeed = ClockSpeed(production_clock_speed)
 		self.resource_extraction_clock_speed: ClockSpeed = ClockSpeed(
 			resource_extraction_clock_speed)
+		self.ingredient_multiplier: float = ingredient_multiplier
+		self.power_consumption_multiplier: float = power_consumption_multiplier
 		self.with_somersloop: bool = with_somersloop
 		# the coefficient matrix for the recipes
 		# coefs are in units of items/second
@@ -58,11 +62,15 @@ class RecipeMatrix(object):
 	def from_curated_recipe_dataset_json(cls, fname: str, *,
 		production_clock_speed: ClockSpeed = ClockSpeed(100),
 		resource_extraction_clock_speed: ClockSpeed = ClockSpeed(250),
+		ingredient_multiplier: float = 1.0,
+		power_consumption_multiplier: float = 1.0,
 		with_somersloop: bool = False,
 	) -> Self:
 		ret = cls(RecipeDataset.from_json(fname),
 			production_clock_speed=production_clock_speed,
 			resource_extraction_clock_speed=resource_extraction_clock_speed,
+			ingredient_multiplier=ingredient_multiplier,
+			power_consumption_multiplier=power_consumption_multiplier,
 			with_somersloop=with_somersloop,
 		)
 		return ret
@@ -131,6 +139,7 @@ class RecipeMatrix(object):
 			row = self._basic_coef_matrix_row(index, somersloop=somersloop,
 				power=building.get_adjusted_power(clock_speed, somersloop,
 					recipe=recipe,
+					power_consumption_multiplier=self.power_consumption_multiplier,
 				),
 				sink_points_rate=recipe.get_production_sink_points_gain(
 					items=self.recipe_dataset.items,
@@ -140,10 +149,17 @@ class RecipeMatrix(object):
 				)
 			)
 			# add ingredients and products
-			for k, v in recipe.ingredients.items():
-				row[k] = -v * cycles_per_second  # ingredients not affected by boost
+			# update date with value if k already in row, otherwise create new entry
+			for k, v in recipe.get_adjusted_ingredients(self.ingredient_multiplier).items():
+				if k in row:
+					row[k] -= v * cycles_per_second
+				else:
+					row[k] = -v * cycles_per_second
 			for k, v in recipe.products.items():
-				row[k] = v * prod_multiplier * cycles_per_second
+				if k in row:
+					row[k] += v * prod_multiplier * cycles_per_second
+				else:
+					row[k] = v * prod_multiplier * cycles_per_second
 
 			# append to coef matrix rows
 			coef_rows_extern.append(row)

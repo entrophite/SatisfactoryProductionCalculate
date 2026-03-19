@@ -45,7 +45,7 @@ class RecipeDatasetCurator(RecipeDataset):
 				display_name=d["mDisplayName"],
 				form=d["mForm"],
 				energy_value=float(d["mEnergyValue"]),
-				resource_sink_points=int(d["mResourceSinkPoints"]),
+				resource_sink_points=int(d.get("mResourceSinkPoints", 0)),
 				category=category,
 			)
 			return new

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import copy
 import dataclasses
 import pdb
 from typing import Optional
@@ -90,6 +91,15 @@ class Recipe(object):
 				break
 		else:
 			ret = None
+		return ret
+
+	def get_adjusted_ingredients(self, ingredient_multiplier: float,
+	) -> dict[str, float]:
+		ret = copy.deepcopy(self.ingredients)
+		if any(b in config.INGREDIENT_MULTIPLIER_BUILDING_LIST for b in self.produced_in):
+			for itemclass, amount in ret.items():
+				amount = max(round(amount * ingredient_multiplier), 1)
+				ret[itemclass] = amount
 		return ret
 
 	def calculate_sink_points(self, items: dict[str, Item]):
@@ -183,6 +193,7 @@ class Building(object):
 
 	def get_adjusted_power(self, clock_speed: ClockSpeed, somersloop: int,
 		recipe: Recipe = None,
+		power_consumption_multiplier: float = 1.0,
 	) -> float:
 		# deal with geothermal generator magic
 		if self.classname == config.RESOURCE_NODE_GEYSER_GENERATOR:
@@ -202,7 +213,8 @@ class Building(object):
 			elif base_power < 0:
 				ret = base_power \
 					* self.get_overclock_power_multiplier(clock_speed) \
-					* self.get_production_boost_power_multiplier(somersloop)
+					* self.get_production_boost_power_multiplier(somersloop) \
+					* power_consumption_multiplier
 			else:
 				ret = base_power
 		return ret

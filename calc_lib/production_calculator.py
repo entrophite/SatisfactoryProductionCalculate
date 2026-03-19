@@ -20,6 +20,8 @@ class ProductionCalculator(object):
 	def from_recipe_dataset_json(cls, fname: str, *,
 		production_clock_speed: int = ClockSpeed(250),
 		resource_extraction_clock_speed: int = ClockSpeed(250),
+		ingredient_multiplier: float = 1.0,
+		power_consumption_multiplier: float = 1.0,
 		enable_resource_conversion: bool = False,
 		enable_somersloop_amplification: bool = False,
 		unfueled_apa_count: int = 0,
@@ -28,6 +30,8 @@ class ProductionCalculator(object):
 		recipe_matrix = RecipeMatrix.from_curated_recipe_dataset_json(fname,
 			production_clock_speed=production_clock_speed,
 			resource_extraction_clock_speed=resource_extraction_clock_speed,
+			ingredient_multiplier=ingredient_multiplier,
+			power_consumption_multiplier=power_consumption_multiplier,
 			with_somersloop=enable_somersloop_amplification,
 		)
 		ret = cls(recipe_matrix,
