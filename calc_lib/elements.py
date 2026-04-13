@@ -93,10 +93,16 @@ class Recipe(object):
 			ret = None
 		return ret
 
+	def can_ingredient_multiplier_apply(self) -> bool:
+		for c in config.INGREDIENT_MULTIPLIER_EXCLUDE_RECIPES:
+			if self.classname.startswith(c):
+				return False
+		return True
+
 	def get_adjusted_ingredients(self, ingredient_multiplier: float,
 	) -> dict[str, float]:
 		ret = copy.deepcopy(self.ingredients)
-		if any(b in config.INGREDIENT_MULTIPLIER_BUILDING_LIST for b in self.produced_in):
+		if self.can_ingredient_multiplier_apply():
 			for itemclass, amount in ret.items():
 				amount = max(round(amount * ingredient_multiplier), 1)
 				ret[itemclass] = amount

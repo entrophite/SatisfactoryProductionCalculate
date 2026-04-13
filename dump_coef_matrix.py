@@ -21,6 +21,9 @@ def main() -> None:
 		help="Set the resource extraction clock speed (1-250) [250]")
 	parser.add_argument("-s", "--with-somersloop", action="store_true",
 		help="Consider production-boosted recipes with Somersloop [no]")
+	parser.add_argument("-m", "--ingredient-multiplier", type=float, default=1.0,
+		metavar="[0, 2]",
+		help="apply recipe ingredient multiplier [%(default)s]")
 
 	args = parser.parse_args()
 
@@ -29,6 +32,7 @@ def main() -> None:
 		production_clock_speed=args.production_clock_speed,
 		resource_extraction_clock_speed=args.resource_extraction_clock_speed,
 		with_somersloop=args.with_somersloop,
+		ingredient_multiplier=args.ingredient_multiplier,
 	)
 
 	recipe_matrix.coef_matrix.to_csv(args.output, sep="\t", index=True)
