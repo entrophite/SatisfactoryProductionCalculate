@@ -48,29 +48,6 @@ CURATOR_NATIVE_CLASSNAME_LIST_POWERBOOSTER = [
 CURATOR_NATIVE_CLASSNAME_RESOURCE_SHORT = "FGResourceDescriptor"
 
 ################################################################################
-# resource global limit can be found at:
-# https://satisfactory.wiki.gg/wiki/Resource_Node
-# https://satisfactory.wiki.gg/wiki/Resource_Well
-# all values are in items/min
-# these values can be calculated from the node/well count and building data,
-# however it's a bit complicated so just put the numbers here
-RESOURCE_GLOBAL_LIMIT = {
-	"Desc_OreIron_C": 92100,
-	"Desc_OreGold_C": 15000,
-	"Desc_OreCopper_C": 36900,
-	"Desc_Stone_C": 69300,
-	"Desc_Coal_C": 42300,
-	"Desc_RawQuartz_C": 13500,
-	"Desc_Sulfur_C": 10800,
-	"Desc_OreUranium_C": 2100,
-	"Desc_OreBauxite_C": 12300,
-	"Desc_SAM_C": 10200,
-	"Desc_LiquidOil_C": 12600,
-	"Desc_NitrogenGas_C": 12000,
-	"Desc_Water_C": -1,  # infinite
-}
-
-################################################################################
 # resource node counts data can be found at:
 # get the data from: https://satisfactory.wiki.gg/wiki/Resource_Node
 RESOURCE_NODE_PURITY_CONFIG = {
@@ -80,41 +57,17 @@ RESOURCE_NODE_PURITY_CONFIG = {
 }
 
 RESOURCE_NODE_CONFIG = {
-	"Desc_OreIron_C": {"impure": 39, "normal": 42, "pure": 46},
-	"Desc_OreGold_C": {"impure": 0, "normal": 9, "pure": 8},
-	"Desc_OreCopper_C": {"impure": 13, "normal": 29, "pure": 13},
-	"Desc_Stone_C": {"impure": 15, "normal": 50, "pure": 29},
-	"Desc_Coal_C": {"impure": 15, "normal": 31, "pure": 16},
-	"Desc_RawQuartz_C": {"impure": 3, "normal": 7, "pure": 7},
-	"Desc_Sulfur_C": {"impure": 6, "normal": 5, "pure": 5},
-	"Desc_OreUranium_C": {"impure": 3, "normal": 2, "pure": 0},
-	"Desc_OreBauxite_C": {"impure": 5, "normal": 6, "pure": 6},
-	"Desc_SAM_C": {"impure": 10, "normal": 6, "pure": 3},
-	"Desc_LiquidOil_C": {"impure": 10, "normal": 12, "pure": 8},
-}
-
-RESOURCE_NODE_EXTRACTOR_LIST_SOLID = [
-	# "Build_MinerMk1_C",  # disabled to avoid duplicate nodes
-	# "Build_MinerMk2_C",  # disabled to avoid duplicate nodes
-	"Build_MinerMk3_C",
-]
-
-RESOURCE_NODE_EXTRACTOR_LIST_CRUDE_OIL = [
-	"Build_OilPump_C",
-]
-
-RESOURCE_NODE_EXTRACTOR_CONFIG = {
-	"Desc_OreIron_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_OreGold_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_OreCopper_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_Stone_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_Coal_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_RawQuartz_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_Sulfur_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_OreUranium_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_OreBauxite_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_SAM_C": RESOURCE_NODE_EXTRACTOR_LIST_SOLID,
-	"Desc_LiquidOil_C": RESOURCE_NODE_EXTRACTOR_LIST_CRUDE_OIL,
+	"Desc_OreIron_C": {"extractor": "Build_MinerMk3_C", "impure": 39, "normal": 42, "pure": 46, "base_rate": 120},
+	"Desc_OreGold_C": {"extractor": "Build_MinerMk3_C", "impure": 0, "normal": 9, "pure": 8, "base_rate": 120},
+	"Desc_OreCopper_C": {"extractor": "Build_MinerMk3_C", "impure": 13, "normal": 29, "pure": 13, "base_rate": 120},
+	"Desc_Stone_C": {"extractor": "Build_MinerMk3_C", "impure": 15, "normal": 50, "pure": 29, "base_rate": 120},
+	"Desc_Coal_C": {"extractor": "Build_MinerMk3_C", "impure": 15, "normal": 31, "pure": 16, "base_rate": 120},
+	"Desc_RawQuartz_C": {"extractor": "Build_MinerMk3_C", "impure": 3, "normal": 7, "pure": 7, "base_rate": 120},
+	"Desc_Sulfur_C": {"extractor": "Build_MinerMk3_C", "impure": 6, "normal": 5, "pure": 5, "base_rate": 120},
+	"Desc_OreUranium_C": {"extractor": "Build_MinerMk3_C", "impure": 3, "normal": 2, "pure": 0, "base_rate": 120},
+	"Desc_OreBauxite_C": {"extractor": "Build_MinerMk3_C", "impure": 5, "normal": 6, "pure": 6, "base_rate": 120},
+	"Desc_SAM_C": {"extractor": "Build_MinerMk3_C", "impure": 10, "normal": 6, "pure": 3, "base_rate": 120},
+	"Desc_LiquidOil_C": {"extractor": "Build_OilPump_C", "impure": 10, "normal": 12, "pure": 8, "base_rate": 120},
 }
 
 RESOURCE_NODE_GEYSER_CONFIG = {
@@ -138,33 +91,31 @@ RESOURCE_NODE_GEYSER_POWER_NORMAL = 200  # MW
 # (value) rate [float]: overall extraction rate of the well cluster
 RESOURCE_WELL_CONFIG = {
 	"Desc_LiquidOil_C": {
-		"Islands": 6000,
-		"RedBambooFields": 9000,
-		"Swamp": 3000,
+		"Islands": {"impure": 2, "normal": 3, "pure": 1},
+		"RedBambooFields": {"impure": 0, "normal": 3, "pure": 3},
+		"Swamp": {"impure": 6, "normal": 0, "pure": 0},
 	},
 	"Desc_NitrogenGas_C": {
-		"DuneDesert": 12000,
-		"AbyssCliff": 11000,
-		"TitanForest": 20000,
-		"BlueCrater": 10000,
-		"JungleSpires": 14000,
-		"RockyDesert": 13000,
+		"DuneDesert": {"impure": 0, "normal": 2, "pure": 5},
+		"AbyssCliff": {"impure": 2, "normal": 2, "pure": 4},
+		"EasternDuneForest": {"impure": 0, "normal": 0, "pure": 10},
+		"BlueCrater": {"impure": 0, "normal": 2, "pure": 4},
+		"JungleSpires": {"impure": 0, "normal": 0, "pure": 7},
+		"RockyDesert": {"impure": 0, "normal": 1, "pure": 6},
 	},
 	"Desc_Water_C": {
-		"DuneDesertNorth": 10000,
-		"DuneDesertSouth": 10000,
-		"DesertCanyons": 10500,
-		"TitanForest": 12000,
-		"EasternDuneForest": 7000,
-		"Grassfield": 11000,
-		"SnaketreeForest": 13000,
-		"WestDuneForest": 14000,
+		"DuneDesertNorth": {"impure": 2, "normal": 1, "pure": 4},
+		"DuneDesertSouth": {"impure": 0, "normal": 2, "pure": 4},
+		"DesertCanyons": {"impure": 1, "normal": 2, "pure": 4},
+		"TitanForest": {"impure": 0, "normal": 0, "pure": 6},
+		"EasternDuneForest": {"impure": 2, "normal": 6, "pure": 0},
+		"GrassField": {"impure": 2, "normal": 0, "pure": 5},
+		"SnaketreeForest": {"impure": 0, "normal": 1, "pure": 6},
+		"WesternDuneForest": {"impure": 0, "normal": 0, "pure": 7},
 	},
 }
 
-RESOURCE_WELL_ACTIVATOR_LIST = [
-	"Build_FrackingSmasher_C",
-]
+RESOURCE_WELL_ACTIVATOR = "Build_FrackingSmasher_C"
 
 ################################################################################
 #

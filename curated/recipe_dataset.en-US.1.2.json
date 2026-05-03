@@ -67,7 +67,7 @@
 			"extract_cycle_time": 0.0,
 			"fueled_power_boost": 0.0,
 			"items_per_cycle": 0,
-			"power_consumption": 0.0,
+			"power_consumption": 0.1,
 			"power_consumption_exponent": 1.321929,
 			"power_production": 0.0,
 			"production_boost_power_consumption_exponent": 2.0,
@@ -202,7 +202,7 @@
 			"extract_cycle_time": 0.0,
 			"fueled_power_boost": 0.0,
 			"items_per_cycle": 0,
-			"power_consumption": 0.0,
+			"power_consumption": 0.1,
 			"power_consumption_exponent": 1.321929,
 			"power_production": 0.0,
 			"production_boost_power_consumption_exponent": 2.0,
@@ -322,7 +322,7 @@
 			"extract_cycle_time": 0.0,
 			"fueled_power_boost": 0.0,
 			"items_per_cycle": 0,
-			"power_consumption": 0.0,
+			"power_consumption": 0.1,
 			"power_consumption_exponent": 1.321929,
 			"power_production": 0.0,
 			"production_boost_power_consumption_exponent": 2.0,
@@ -1013,7 +1013,7 @@
 		"Desc_IronScrew_C": {
 			"category": "FGItemDescriptor",
 			"classname": "Desc_IronScrew_C",
-			"display_name": "Screws",
+			"display_name": "Screw",
 			"energy_value": 0.0,
 			"form": "RF_SOLID",
 			"resource_sink_points": 2
@@ -1833,38 +1833,6 @@
 			"energy_value": 0.0,
 			"form": "RF_SOLID",
 			"resource_sink_points": 2
-		},
-		"Desc_XmasDataCartridge1_C": {
-			"category": "FGItemDescriptor",
-			"classname": "Desc_XmasDataCartridge1_C",
-			"display_name": "FICSMAS Data Cartridge Day 1",
-			"energy_value": 0.0,
-			"form": "RF_SOLID",
-			"resource_sink_points": 0
-		},
-		"Desc_XmasDataCartridge2_C": {
-			"category": "FGItemDescriptor",
-			"classname": "Desc_XmasDataCartridge2_C",
-			"display_name": "FICSMAS Data Cartridge Day 4",
-			"energy_value": 0.0,
-			"form": "RF_SOLID",
-			"resource_sink_points": 0
-		},
-		"Desc_XmasDataCartridge3_C": {
-			"category": "FGItemDescriptor",
-			"classname": "Desc_XmasDataCartridge3_C",
-			"display_name": "FICSMAS Data Cartridge Day 8",
-			"energy_value": 0.0,
-			"form": "RF_SOLID",
-			"resource_sink_points": 0
-		},
-		"Desc_XmasDataCartridge4_C": {
-			"category": "FGItemDescriptor",
-			"classname": "Desc_XmasDataCartridge4_C",
-			"display_name": "FICSMAS Data Cartridge Day 14",
-			"energy_value": 0.0,
-			"form": "RF_SOLID",
-			"resource_sink_points": 0
 		},
 		"Desc_XmasStar_C": {
 			"category": "FGItemDescriptor",
@@ -3687,7 +3655,7 @@
 		},
 		"Recipe_Alternate_IronIngot_Leached_C": {
 			"classname": "Recipe_Alternate_IronIngot_Leached_C",
-			"display_name": "Alternate: Leached Iron Ingot",
+			"display_name": "Alternate: Leached Iron ingot",
 			"global_limit": -1,
 			"ingredients": {
 				"Desc_OreIron_C": 5,
@@ -4272,7 +4240,7 @@
 		},
 		"Recipe_Alternate_Screw_2_C": {
 			"classname": "Recipe_Alternate_Screw_2_C",
-			"display_name": "Alternate: Steel Screws",
+			"display_name": "Alternate: Steel Screw",
 			"global_limit": -1,
 			"ingredients": {
 				"Desc_SteelPlate_C": 1
@@ -4293,7 +4261,7 @@
 		},
 		"Recipe_Alternate_Screw_C": {
 			"classname": "Recipe_Alternate_Screw_C",
-			"display_name": "Alternate: Cast Screws",
+			"display_name": "Alternate: Cast Screw",
 			"global_limit": -1,
 			"ingredients": {
 				"Desc_IronIngot_C": 5
@@ -4918,27 +4886,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_Barrier_Corner_C": {
-			"classname": "Recipe_Barrier_Corner_C",
-			"display_name": "Corner Road Barrier",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Barrier_Corner_C": 1
-			},
-			"raw_sink_points_gain": -12.0,
-			"sinkable_points_gain": -12.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_Barrier_Low_01_C": {
 			"classname": "Recipe_Barrier_Low_01_C",
 			"display_name": "Low Barrier",
@@ -5072,69 +5019,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_Beam_Cable_C": {
-			"classname": "Recipe_Beam_Cable_C",
-			"display_name": "Braided Cable",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_SteelPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Beam_Cable_C": 1
-			},
-			"raw_sink_points_gain": -64.0,
-			"sinkable_points_gain": -64.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_Beam_Cable_Cluster_C": {
-			"classname": "Recipe_Beam_Cable_Cluster_C",
-			"display_name": "Braided Cable Cluster",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_SteelPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Beam_Cable_Cluster_C": 1
-			},
-			"raw_sink_points_gain": -64.0,
-			"sinkable_points_gain": -64.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_Beam_Concrete_C": {
-			"classname": "Recipe_Beam_Concrete_C",
-			"display_name": "Round Concrete Beam",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Beam_Concrete_C": 1
-			},
-			"raw_sink_points_gain": -12.0,
-			"sinkable_points_gain": -12.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_Beam_Connector_C": {
 			"classname": "Recipe_Beam_Connector_C",
 			"display_name": "Beam Connector",
@@ -5177,48 +5061,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_Beam_Cross_C": {
-			"classname": "Recipe_Beam_Cross_C",
-			"display_name": "Cross Beam",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_SteelPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Beam_Cross_C": 1
-			},
-			"raw_sink_points_gain": -64.0,
-			"sinkable_points_gain": -64.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_Beam_H_C": {
-			"classname": "Recipe_Beam_H_C",
-			"display_name": "H-Beam",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_SteelPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Beam_H_C": 1
-			},
-			"raw_sink_points_gain": -64.0,
-			"sinkable_points_gain": -64.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_Beam_Painted_C": {
 			"classname": "Recipe_Beam_Painted_C",
 			"display_name": "Painted Beam",
@@ -5234,27 +5076,6 @@
 			],
 			"products": {
 				"Desc_Beam_Painted_C": 1
-			},
-			"raw_sink_points_gain": -64.0,
-			"sinkable_points_gain": -64.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_Beam_Shelf_C": {
-			"classname": "Recipe_Beam_Shelf_C",
-			"display_name": "Shelf Beam",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_SteelPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Beam_Shelf_C": 1
 			},
 			"raw_sink_points_gain": -64.0,
 			"sinkable_points_gain": -64.0,
@@ -5279,71 +5100,6 @@
 			},
 			"raw_sink_points_gain": -24.0,
 			"sinkable_points_gain": -24.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_BigGarageDoor_16x8_C": {
-			"classname": "Recipe_BigGarageDoor_16x8_C",
-			"display_name": "Roll-Up Gate",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 4,
-				"Desc_IronPlate_C": 4
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_BigGarageDoor_16x8_C": 1
-			},
-			"raw_sink_points_gain": -72.0,
-			"sinkable_points_gain": -72.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_BigGarageDoor_16x8_Concrete_C": {
-			"classname": "Recipe_BigGarageDoor_16x8_Concrete_C",
-			"display_name": "Roll-Up Gate",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 8
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_BigGarageDoor_16x8_Concrete_C": 1
-			},
-			"raw_sink_points_gain": -96.0,
-			"sinkable_points_gain": -96.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_BigGarageDoor_16x8_Steel_C": {
-			"classname": "Recipe_BigGarageDoor_16x8_Steel_C",
-			"display_name": "Roll-Up Gate",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 4,
-				"Desc_SteelPlate_C": 4
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_BigGarageDoor_16x8_Steel_C": 1
-			},
-			"raw_sink_points_gain": -304.0,
-			"sinkable_points_gain": -304.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -6240,29 +5996,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_ConveyorAttachmentMergerPriority_C": {
-			"classname": "Recipe_ConveyorAttachmentMergerPriority_C",
-			"display_name": "Priority Merger",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_CrystalOscillator_C": 1,
-				"Desc_IronPlateReinforced_C": 2,
-				"Desc_ModularFrame_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_ConveyorAttachmentMergerPriority_C": 1
-			},
-			"raw_sink_points_gain": -3720.0,
-			"sinkable_points_gain": -3720.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_ConveyorAttachmentMerger_C": {
 			"classname": "Recipe_ConveyorAttachmentMerger_C",
 			"display_name": "Conveyor Merger",
@@ -6630,29 +6363,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_ConveyorMonitor_C": {
-			"classname": "Recipe_ConveyorMonitor_C",
-			"display_name": "Conveyor Throughput Monitor",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_CrystalOscillator_C": 1,
-				"Desc_IronPlateReinforced_C": 4,
-				"Desc_QuartzCrystal_C": 10
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_ConveyorMonitor_C": 1
-			},
-			"raw_sink_points_gain": -4052.0,
-			"sinkable_points_gain": -4052.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_ConveyorPoleStackable_C": {
 			"classname": "Recipe_ConveyorPoleStackable_C",
 			"display_name": "Stackable Conveyor Pole",
@@ -6719,29 +6429,6 @@
 			},
 			"raw_sink_points_gain": -22.0,
 			"sinkable_points_gain": -22.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_ConveyorWallHole_C": {
-			"classname": "Recipe_ConveyorWallHole_C",
-			"display_name": "Conveyor Wall Hole",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 2,
-				"Desc_IronPlate_C": 2,
-				"Desc_IronRod_C": 2
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_ConveyorWallHole_C": 1
-			},
-			"raw_sink_points_gain": -44.0,
-			"sinkable_points_gain": -44.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -7295,51 +6982,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_ElevatorFloorStop_C": {
-			"classname": "Recipe_ElevatorFloorStop_C",
-			"display_name": "Elevator Floor Stop",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_ModularFrame_C": 2,
-				"Desc_Motor_C": 1,
-				"Desc_SteelPlate_C": 5
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_ElevatorFloorStop_C": 1
-			},
-			"raw_sink_points_gain": -2656.0,
-			"sinkable_points_gain": -2656.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_Elevator_C": {
-			"classname": "Recipe_Elevator_C",
-			"display_name": "Personnel Elevator",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Silica_C": 1,
-				"Desc_SteelPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Elevator_C": 1
-			},
-			"raw_sink_points_gain": -84.0,
-			"sinkable_points_gain": -84.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_EncasedIndustrialBeam_C": {
 			"classname": "Recipe_EncasedIndustrialBeam_C",
 			"display_name": "Encased Industrial Beam",
@@ -7796,54 +7438,6 @@
 			},
 			"raw_sink_points_gain": 90.0,
 			"sinkable_points_gain": 90.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_FluidTruckStation_C": {
-			"classname": "Recipe_FluidTruckStation_C",
-			"display_name": "Fluid Truck Station",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_ModularFrame_C": 15,
-				"Desc_Plastic_C": 50,
-				"Desc_Rubber_C": 20,
-				"Desc_Stator_C": 20
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_FluidTruckStation_C": 1
-			},
-			"raw_sink_points_gain": -15870.0,
-			"sinkable_points_gain": -15870.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_FluidTruck_C": {
-			"classname": "Recipe_FluidTruck_C",
-			"display_name": "Fluid Truck",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_ModularFrame_C": 20,
-				"Desc_Motor_C": 15,
-				"Desc_Plastic_C": 50,
-				"Desc_SteelPlateReinforced_C": 20
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_FluidTruck_C": 1
-			},
-			"raw_sink_points_gain": -45270.0,
-			"sinkable_points_gain": -45270.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -8786,52 +8380,6 @@
 			},
 			"raw_sink_points_gain": -56.0,
 			"sinkable_points_gain": -56.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_HyperTubeJunction_C": {
-			"classname": "Recipe_HyperTubeJunction_C",
-			"display_name": "Hypertube Junction",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_CopperSheet_C": 5,
-				"Desc_SteelPlateReinforced_C": 2,
-				"Desc_SteelPlate_C": 2
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_HyperTubeJunction_C": 1
-			},
-			"raw_sink_points_gain": -1304.0,
-			"sinkable_points_gain": -1304.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_HyperTubeTJunction_C": {
-			"classname": "Recipe_HyperTubeTJunction_C",
-			"display_name": "Hypertube Branch",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_CopperSheet_C": 5,
-				"Desc_SteelPipe_C": 2,
-				"Desc_SteelPlateReinforced_C": 2
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_HypertubeTJunction_C": 1
-			},
-			"raw_sink_points_gain": -1224.0,
-			"sinkable_points_gain": -1224.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -10020,50 +9568,6 @@
 			},
 			"raw_sink_points_gain": -8.0,
 			"sinkable_points_gain": -8.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_LargeFan_C": {
-			"classname": "Recipe_LargeFan_C",
-			"display_name": "Large Fan",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_CopperSheet_C": 1,
-				"Desc_IronPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_LargeFan_C": 1
-			},
-			"raw_sink_points_gain": -30.0,
-			"sinkable_points_gain": -30.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_LargeVent_C": {
-			"classname": "Recipe_LargeVent_C",
-			"display_name": "Large Vent",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_CopperSheet_C": 1,
-				"Desc_IronPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_LargeVent_C": 1
-			},
-			"raw_sink_points_gain": -30.0,
-			"sinkable_points_gain": -30.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -11514,27 +11018,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_PipelineJunction_T_C": {
-			"classname": "Recipe_PipelineJunction_T_C",
-			"display_name": "Pipeline T-Junction",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_CopperSheet_C": 5
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_PipelineJunction_T_C": 1
-			},
-			"raw_sink_points_gain": -120.0,
-			"sinkable_points_gain": -120.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_PipelineMK2_C": {
 			"classname": "Recipe_PipelineMK2_C",
 			"display_name": "Pipeline Mk.2",
@@ -11777,30 +11260,6 @@
 			},
 			"raw_sink_points_gain": 28.0,
 			"sinkable_points_gain": 28.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_PortalPotty_C": {
-			"classname": "Recipe_PortalPotty_C",
-			"display_name": "SPWN",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_GenericBiomass_C": 100,
-				"Desc_ModularFrame_C": 5,
-				"Desc_SAMIngot_C": 20,
-				"Desc_SteelPipe_C": 20
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_PortalPotty_C": 1
-			},
-			"raw_sink_points_gain": -6920.0,
-			"sinkable_points_gain": -6920.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -13942,29 +13401,6 @@
 			},
 			"raw_sink_points_gain": -8400.0,
 			"sinkable_points_gain": -8400.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_RailroadEndStop_C": {
-			"classname": "Recipe_RailroadEndStop_C",
-			"display_name": "Buffer Stop",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 20,
-				"Desc_SteelPipe_C": 2,
-				"Desc_SteelPlateReinforced_C": 5
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_RailroadEndStop_C": 1
-			},
-			"raw_sink_points_gain": -2928.0,
-			"sinkable_points_gain": -2928.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -16642,7 +16078,7 @@
 		},
 		"Recipe_Screw_C": {
 			"classname": "Recipe_Screw_C",
-			"display_name": "Screws",
+			"display_name": "Screw",
 			"global_limit": -1,
 			"ingredients": {
 				"Desc_IronRod_C": 1
@@ -17213,28 +16649,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_StackableShelf_C": {
-			"classname": "Recipe_StackableShelf_C",
-			"display_name": "Basic Shelf Unit",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_IronPlate_C": 1,
-				"Desc_IronRod_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_StackableShelf_C": 1
-			},
-			"raw_sink_points_gain": -10.0,
-			"sinkable_points_gain": -10.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_Stair_Asphalt_8x1_C": {
 			"classname": "Recipe_Stair_Asphalt_8x1_C",
 			"display_name": "Foundation Stairs (1 m)",
@@ -17547,50 +16961,6 @@
 			},
 			"raw_sink_points_gain": -60.0,
 			"sinkable_points_gain": -60.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_Stairs_Left_01_C": {
-			"classname": "Recipe_Stairs_Left_01_C",
-			"display_name": "Stairs Left",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 3,
-				"Desc_IronPlate_C": 3
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Stairs_Left_01_C": 1
-			},
-			"raw_sink_points_gain": -54.0,
-			"sinkable_points_gain": -54.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_Stairs_Right_01_C": {
-			"classname": "Recipe_Stairs_Right_01_C",
-			"display_name": "Stairs Right",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 3,
-				"Desc_IronPlate_C": 3
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Stairs_Right_01_C": 1
-			},
-			"raw_sink_points_gain": -54.0,
-			"sinkable_points_gain": -54.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -19129,101 +18499,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_VehiclePath_Explorer_C": {
-			"classname": "Recipe_VehiclePath_Explorer_C",
-			"display_name": "Explorer Vehicle Path",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_Explorer_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_FactoryCart_C": {
-			"classname": "Recipe_VehiclePath_FactoryCart_C",
-			"display_name": "Factory Cart Vehicle Path",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_FactoryCart_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_Tractor_C": {
-			"classname": "Recipe_VehiclePath_Tractor_C",
-			"display_name": "Tractor Vehicle Path",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_Tractor_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_Truck_C": {
-			"classname": "Recipe_VehiclePath_Truck_C",
-			"display_name": "Truck Vehicle Path",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_Truck_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_Universal_C": {
-			"classname": "Recipe_VehiclePath_Universal_C",
-			"display_name": "Universal Vehicle Path",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_Universal_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_Walkway_Cross_C": {
 			"classname": "Recipe_Walkway_Cross_C",
 			"display_name": "Walkway Intersection",
@@ -19756,7 +19031,7 @@
 		},
 		"Recipe_Wall_Concrete_FlipTris_8x1_C": {
 			"classname": "Recipe_Wall_Concrete_FlipTris_8x1_C",
-			"display_name": "Inverted Ramp Wall (1\u202fm)",
+			"display_name": "Wall 1a",
 			"global_limit": -1,
 			"ingredients": {
 				"Desc_Cement_C": 2
@@ -21208,90 +20483,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_XmasDataCartridge1_C": {
-			"classname": "Recipe_XmasDataCartridge1_C",
-			"display_name": "FICSMAS Data Cartridge Day 1",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Gift_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 12.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_WorkshopComponent_C"
-			],
-			"products": {
-				"Desc_XmasDataCartridge1_C": 1
-			},
-			"raw_sink_points_gain": -1.0,
-			"sinkable_points_gain": -1.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_XmasDataCartridge2_C": {
-			"classname": "Recipe_XmasDataCartridge2_C",
-			"display_name": "FICSMAS Data Cartridge Day 4",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Gift_C": 4
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 12.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_WorkshopComponent_C"
-			],
-			"products": {
-				"Desc_XmasDataCartridge2_C": 1
-			},
-			"raw_sink_points_gain": -4.0,
-			"sinkable_points_gain": -4.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_XmasDataCartridge3_C": {
-			"classname": "Recipe_XmasDataCartridge3_C",
-			"display_name": "FICSMAS Data Cartridge Day 8",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Gift_C": 8
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 12.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_WorkshopComponent_C"
-			],
-			"products": {
-				"Desc_XmasDataCartridge3_C": 1
-			},
-			"raw_sink_points_gain": -8.0,
-			"sinkable_points_gain": -8.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_XmasDataCartridge4_C": {
-			"classname": "Recipe_XmasDataCartridge4_C",
-			"display_name": "FICSMAS Data Cartridge Day 14",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Gift_C": 14
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 12.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_WorkshopComponent_C"
-			],
-			"products": {
-				"Desc_XmasDataCartridge4_C": 1
-			},
-			"raw_sink_points_gain": -14.0,
-			"sinkable_points_gain": -14.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_XmasStar_C": {
 			"classname": "Recipe_XmasStar_C",
 			"display_name": "FICSMAS Wonder Star",
@@ -21458,16 +20649,16 @@
 			"global_limit": 15,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Coal_C": 0.5
+				"Desc_Coal_C": 1
 			},
-			"raw_sink_points_gain": 1.5,
-			"sinkable_points_gain": 1.5,
+			"raw_sink_points_gain": 3.0,
+			"sinkable_points_gain": 3.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21483,7 +20674,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Coal_C": 1.0
+				"Desc_Coal_C": 1
 			},
 			"raw_sink_points_gain": 3.0,
 			"sinkable_points_gain": 3.0,
@@ -21496,16 +20687,16 @@
 			"global_limit": 16,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Coal_C": 2.0
+				"Desc_Coal_C": 1
 			},
-			"raw_sink_points_gain": 6.0,
-			"sinkable_points_gain": 6.0,
+			"raw_sink_points_gain": 3.0,
+			"sinkable_points_gain": 3.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21515,16 +20706,16 @@
 			"global_limit": 5,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreBauxite_C": 0.5
+				"Desc_OreBauxite_C": 1
 			},
-			"raw_sink_points_gain": 4.0,
-			"sinkable_points_gain": 4.0,
+			"raw_sink_points_gain": 8.0,
+			"sinkable_points_gain": 8.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21540,7 +20731,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreBauxite_C": 1.0
+				"Desc_OreBauxite_C": 1
 			},
 			"raw_sink_points_gain": 8.0,
 			"sinkable_points_gain": 8.0,
@@ -21553,16 +20744,16 @@
 			"global_limit": 6,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreBauxite_C": 2.0
+				"Desc_OreBauxite_C": 1
 			},
-			"raw_sink_points_gain": 16.0,
-			"sinkable_points_gain": 16.0,
+			"raw_sink_points_gain": 8.0,
+			"sinkable_points_gain": 8.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21572,16 +20763,16 @@
 			"global_limit": 13,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreCopper_C": 0.5
+				"Desc_OreCopper_C": 1
 			},
-			"raw_sink_points_gain": 1.5,
-			"sinkable_points_gain": 1.5,
+			"raw_sink_points_gain": 3.0,
+			"sinkable_points_gain": 3.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21597,7 +20788,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreCopper_C": 1.0
+				"Desc_OreCopper_C": 1
 			},
 			"raw_sink_points_gain": 3.0,
 			"sinkable_points_gain": 3.0,
@@ -21610,16 +20801,35 @@
 			"global_limit": 13,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreCopper_C": 2.0
+				"Desc_OreCopper_C": 1
 			},
-			"raw_sink_points_gain": 6.0,
-			"sinkable_points_gain": 6.0,
+			"raw_sink_points_gain": 3.0,
+			"sinkable_points_gain": 3.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"ResourceNode-Build_MinerMk3_C-Desc_OreGold_C-Impure": {
+			"classname": "ResourceNode-Build_MinerMk3_C-Desc_OreGold_C-Impure",
+			"display_name": "Miner Mk.3 (Caterium Ore, Impure)",
+			"global_limit": 0,
+			"ingredients": {},
+			"is_resource_proxy": true,
+			"manufacturing_duration": 0.5,
+			"overclockable": true,
+			"produced_in": [
+				"Build_MinerMk3_C"
+			],
+			"products": {
+				"Desc_OreGold_C": 1
+			},
+			"raw_sink_points_gain": 7.0,
+			"sinkable_points_gain": 7.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21635,7 +20845,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreGold_C": 1.0
+				"Desc_OreGold_C": 1
 			},
 			"raw_sink_points_gain": 7.0,
 			"sinkable_points_gain": 7.0,
@@ -21648,16 +20858,16 @@
 			"global_limit": 8,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreGold_C": 2.0
+				"Desc_OreGold_C": 1
 			},
-			"raw_sink_points_gain": 14.0,
-			"sinkable_points_gain": 14.0,
+			"raw_sink_points_gain": 7.0,
+			"sinkable_points_gain": 7.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21667,16 +20877,16 @@
 			"global_limit": 39,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreIron_C": 0.5
+				"Desc_OreIron_C": 1
 			},
-			"raw_sink_points_gain": 0.5,
-			"sinkable_points_gain": 0.5,
+			"raw_sink_points_gain": 1.0,
+			"sinkable_points_gain": 1.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21692,7 +20902,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreIron_C": 1.0
+				"Desc_OreIron_C": 1
 			},
 			"raw_sink_points_gain": 1.0,
 			"sinkable_points_gain": 1.0,
@@ -21705,16 +20915,16 @@
 			"global_limit": 46,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreIron_C": 2.0
+				"Desc_OreIron_C": 1
 			},
-			"raw_sink_points_gain": 2.0,
-			"sinkable_points_gain": 2.0,
+			"raw_sink_points_gain": 1.0,
+			"sinkable_points_gain": 1.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21724,16 +20934,16 @@
 			"global_limit": 3,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreUranium_C": 0.5
+				"Desc_OreUranium_C": 1
 			},
-			"raw_sink_points_gain": 17.5,
-			"sinkable_points_gain": 17.5,
+			"raw_sink_points_gain": 35.0,
+			"sinkable_points_gain": 35.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21749,7 +20959,26 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreUranium_C": 1.0
+				"Desc_OreUranium_C": 1
+			},
+			"raw_sink_points_gain": 35.0,
+			"sinkable_points_gain": 35.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"ResourceNode-Build_MinerMk3_C-Desc_OreUranium_C-Pure": {
+			"classname": "ResourceNode-Build_MinerMk3_C-Desc_OreUranium_C-Pure",
+			"display_name": "Miner Mk.3 (Uranium, Pure)",
+			"global_limit": 0,
+			"ingredients": {},
+			"is_resource_proxy": true,
+			"manufacturing_duration": 0.125,
+			"overclockable": true,
+			"produced_in": [
+				"Build_MinerMk3_C"
+			],
+			"products": {
+				"Desc_OreUranium_C": 1
 			},
 			"raw_sink_points_gain": 35.0,
 			"sinkable_points_gain": 35.0,
@@ -21762,16 +20991,16 @@
 			"global_limit": 3,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_RawQuartz_C": 0.5
+				"Desc_RawQuartz_C": 1
 			},
-			"raw_sink_points_gain": 7.5,
-			"sinkable_points_gain": 7.5,
+			"raw_sink_points_gain": 15.0,
+			"sinkable_points_gain": 15.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21787,7 +21016,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_RawQuartz_C": 1.0
+				"Desc_RawQuartz_C": 1
 			},
 			"raw_sink_points_gain": 15.0,
 			"sinkable_points_gain": 15.0,
@@ -21800,16 +21029,16 @@
 			"global_limit": 7,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_RawQuartz_C": 2.0
+				"Desc_RawQuartz_C": 1
 			},
-			"raw_sink_points_gain": 30.0,
-			"sinkable_points_gain": 30.0,
+			"raw_sink_points_gain": 15.0,
+			"sinkable_points_gain": 15.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21819,16 +21048,16 @@
 			"global_limit": 10,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_SAM_C": 0.5
+				"Desc_SAM_C": 1
 			},
-			"raw_sink_points_gain": 10.0,
-			"sinkable_points_gain": 10.0,
+			"raw_sink_points_gain": 20.0,
+			"sinkable_points_gain": 20.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21844,7 +21073,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_SAM_C": 1.0
+				"Desc_SAM_C": 1
 			},
 			"raw_sink_points_gain": 20.0,
 			"sinkable_points_gain": 20.0,
@@ -21857,16 +21086,16 @@
 			"global_limit": 3,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_SAM_C": 2.0
+				"Desc_SAM_C": 1
 			},
-			"raw_sink_points_gain": 40.0,
-			"sinkable_points_gain": 40.0,
+			"raw_sink_points_gain": 20.0,
+			"sinkable_points_gain": 20.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21876,16 +21105,16 @@
 			"global_limit": 15,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Stone_C": 0.5
+				"Desc_Stone_C": 1
 			},
-			"raw_sink_points_gain": 1.0,
-			"sinkable_points_gain": 1.0,
+			"raw_sink_points_gain": 2.0,
+			"sinkable_points_gain": 2.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21901,7 +21130,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Stone_C": 1.0
+				"Desc_Stone_C": 1
 			},
 			"raw_sink_points_gain": 2.0,
 			"sinkable_points_gain": 2.0,
@@ -21914,16 +21143,16 @@
 			"global_limit": 29,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Stone_C": 2.0
+				"Desc_Stone_C": 1
 			},
-			"raw_sink_points_gain": 4.0,
-			"sinkable_points_gain": 4.0,
+			"raw_sink_points_gain": 2.0,
+			"sinkable_points_gain": 2.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21933,16 +21162,16 @@
 			"global_limit": 6,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Sulfur_C": 0.5
+				"Desc_Sulfur_C": 1
 			},
-			"raw_sink_points_gain": 5.5,
-			"sinkable_points_gain": 5.5,
+			"raw_sink_points_gain": 11.0,
+			"sinkable_points_gain": 11.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21958,7 +21187,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Sulfur_C": 1.0
+				"Desc_Sulfur_C": 1
 			},
 			"raw_sink_points_gain": 11.0,
 			"sinkable_points_gain": 11.0,
@@ -21971,16 +21200,16 @@
 			"global_limit": 5,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Sulfur_C": 2.0
+				"Desc_Sulfur_C": 1
 			},
-			"raw_sink_points_gain": 22.0,
-			"sinkable_points_gain": 22.0,
+			"raw_sink_points_gain": 11.0,
+			"sinkable_points_gain": 11.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21990,15 +21219,15 @@
 			"global_limit": 10,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 1.0,
+			"manufacturing_duration": 2.0,
 			"overclockable": true,
 			"produced_in": [
 				"Build_OilPump_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 1000.0
+				"Desc_LiquidOil_C": 2000
 			},
-			"raw_sink_points_gain": 30.0,
+			"raw_sink_points_gain": 60.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
@@ -22015,7 +21244,7 @@
 				"Build_OilPump_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 2000.0
+				"Desc_LiquidOil_C": 2000
 			},
 			"raw_sink_points_gain": 60.0,
 			"sinkable_points_gain": 0.0,
@@ -22028,15 +21257,15 @@
 			"global_limit": 8,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 1.0,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_OilPump_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 4000.0
+				"Desc_LiquidOil_C": 2000
 			},
-			"raw_sink_points_gain": 120.0,
+			"raw_sink_points_gain": 60.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
@@ -22053,7 +21282,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 6000
+				"Desc_LiquidOil_C": 6000.0
 			},
 			"raw_sink_points_gain": 180.0,
 			"sinkable_points_gain": 0.0,
@@ -22072,7 +21301,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 9000
+				"Desc_LiquidOil_C": 9000.0
 			},
 			"raw_sink_points_gain": 270.0,
 			"sinkable_points_gain": 0.0,
@@ -22091,7 +21320,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 3000
+				"Desc_LiquidOil_C": 3000.0
 			},
 			"raw_sink_points_gain": 90.0,
 			"sinkable_points_gain": 0.0,
@@ -22110,7 +21339,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 11000
+				"Desc_NitrogenGas_C": 11000.0
 			},
 			"raw_sink_points_gain": 110.0,
 			"sinkable_points_gain": 0.0,
@@ -22129,7 +21358,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 10000
+				"Desc_NitrogenGas_C": 10000.0
 			},
 			"raw_sink_points_gain": 100.0,
 			"sinkable_points_gain": 0.0,
@@ -22148,9 +21377,28 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 12000
+				"Desc_NitrogenGas_C": 12000.0
 			},
 			"raw_sink_points_gain": 120.0,
+			"sinkable_points_gain": 0.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"ResourceWell-Build_FrackingSmasher_C-Desc_NitrogenGas_C-EasternDuneForest": {
+			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_NitrogenGas_C-EasternDuneForest",
+			"display_name": "Resource Well Pressurizer (Nitrogen Gas, EasternDuneForest)",
+			"global_limit": 1,
+			"ingredients": {},
+			"is_resource_proxy": true,
+			"manufacturing_duration": 1,
+			"overclockable": true,
+			"produced_in": [
+				"Build_FrackingSmasher_C"
+			],
+			"products": {
+				"Desc_NitrogenGas_C": 20000.0
+			},
+			"raw_sink_points_gain": 200.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
@@ -22167,7 +21415,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 14000
+				"Desc_NitrogenGas_C": 14000.0
 			},
 			"raw_sink_points_gain": 140.0,
 			"sinkable_points_gain": 0.0,
@@ -22186,28 +21434,9 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 13000
+				"Desc_NitrogenGas_C": 13000.0
 			},
 			"raw_sink_points_gain": 130.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 0.0
-		},
-		"ResourceWell-Build_FrackingSmasher_C-Desc_NitrogenGas_C-TitanForest": {
-			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_NitrogenGas_C-TitanForest",
-			"display_name": "Resource Well Pressurizer (Nitrogen Gas, TitanForest)",
-			"global_limit": 1,
-			"ingredients": {},
-			"is_resource_proxy": true,
-			"manufacturing_duration": 1,
-			"overclockable": true,
-			"produced_in": [
-				"Build_FrackingSmasher_C"
-			],
-			"products": {
-				"Desc_NitrogenGas_C": 20000
-			},
-			"raw_sink_points_gain": 200.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
@@ -22224,7 +21453,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 10500
+				"Desc_Water_C": 10500.0
 			},
 			"raw_sink_points_gain": 52.5,
 			"sinkable_points_gain": 0.0,
@@ -22243,7 +21472,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 10000
+				"Desc_Water_C": 10000.0
 			},
 			"raw_sink_points_gain": 50.0,
 			"sinkable_points_gain": 0.0,
@@ -22262,7 +21491,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 10000
+				"Desc_Water_C": 10000.0
 			},
 			"raw_sink_points_gain": 50.0,
 			"sinkable_points_gain": 0.0,
@@ -22281,16 +21510,16 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 7000
+				"Desc_Water_C": 7000.0
 			},
 			"raw_sink_points_gain": 35.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
-		"ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-Grassfield": {
-			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-Grassfield",
-			"display_name": "Resource Well Pressurizer (Water, Grassfield)",
+		"ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-GrassField": {
+			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-GrassField",
+			"display_name": "Resource Well Pressurizer (Water, GrassField)",
 			"global_limit": 1,
 			"ingredients": {},
 			"is_resource_proxy": true,
@@ -22300,7 +21529,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 11000
+				"Desc_Water_C": 11000.0
 			},
 			"raw_sink_points_gain": 55.0,
 			"sinkable_points_gain": 0.0,
@@ -22319,7 +21548,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 13000
+				"Desc_Water_C": 13000.0
 			},
 			"raw_sink_points_gain": 65.0,
 			"sinkable_points_gain": 0.0,
@@ -22338,16 +21567,16 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 12000
+				"Desc_Water_C": 12000.0
 			},
 			"raw_sink_points_gain": 60.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
-		"ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-WestDuneForest": {
-			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-WestDuneForest",
-			"display_name": "Resource Well Pressurizer (Water, WestDuneForest)",
+		"ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-WesternDuneForest": {
+			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-WesternDuneForest",
+			"display_name": "Resource Well Pressurizer (Water, WesternDuneForest)",
 			"global_limit": 1,
 			"ingredients": {},
 			"is_resource_proxy": true,
@@ -22357,12 +21586,266 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 14000
+				"Desc_Water_C": 14000.0
 			},
 			"raw_sink_points_gain": 70.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		}
-	}
+	},
+	"resource_nodes": [
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreIron_C",
+			"display_name": "Desc_OreIron_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 39,
+			"normal": 42,
+			"pure": 46
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreGold_C",
+			"display_name": "Desc_OreGold_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 0,
+			"normal": 9,
+			"pure": 8
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreCopper_C",
+			"display_name": "Desc_OreCopper_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 13,
+			"normal": 29,
+			"pure": 13
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_Stone_C",
+			"display_name": "Desc_Stone_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 15,
+			"normal": 50,
+			"pure": 29
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_Coal_C",
+			"display_name": "Desc_Coal_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 15,
+			"normal": 31,
+			"pure": 16
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_RawQuartz_C",
+			"display_name": "Desc_RawQuartz_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 3,
+			"normal": 7,
+			"pure": 7
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_Sulfur_C",
+			"display_name": "Desc_Sulfur_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 6,
+			"normal": 5,
+			"pure": 5
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreUranium_C",
+			"display_name": "Desc_OreUranium_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 3,
+			"normal": 2,
+			"pure": 0
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreBauxite_C",
+			"display_name": "Desc_OreBauxite_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 5,
+			"normal": 6,
+			"pure": 6
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_SAM_C",
+			"display_name": "Desc_SAM_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 10,
+			"normal": 6,
+			"pure": 3
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_LiquidOil_C",
+			"display_name": "Desc_LiquidOil_C",
+			"extractor": "Build_OilPump_C",
+			"impure": 10,
+			"normal": 12,
+			"pure": 8
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_LiquidOil_C",
+			"display_name": "Islands",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 3,
+			"pure": 1
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_LiquidOil_C",
+			"display_name": "RedBambooFields",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 3,
+			"pure": 3
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_LiquidOil_C",
+			"display_name": "Swamp",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 6,
+			"normal": 0,
+			"pure": 0
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "DuneDesert",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 2,
+			"pure": 5
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "AbyssCliff",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 2,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "EasternDuneForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 0,
+			"pure": 10
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "BlueCrater",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 2,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "JungleSpires",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 0,
+			"pure": 7
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "RockyDesert",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 1,
+			"pure": 6
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "DuneDesertNorth",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 1,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "DuneDesertSouth",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 2,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "DesertCanyons",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 1,
+			"normal": 2,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "TitanForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 0,
+			"pure": 6
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "EasternDuneForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 6,
+			"pure": 0
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "GrassField",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 0,
+			"pure": 5
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "SnaketreeForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 1,
+			"pure": 6
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "WesternDuneForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 0,
+			"pure": 7
+		}
+	]
 }

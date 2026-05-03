@@ -67,7 +67,7 @@
 			"extract_cycle_time": 0.0,
 			"fueled_power_boost": 0.0,
 			"items_per_cycle": 0,
-			"power_consumption": 0.0,
+			"power_consumption": 0.1,
 			"power_consumption_exponent": 1.321929,
 			"power_production": 0.0,
 			"production_boost_power_consumption_exponent": 2.0,
@@ -202,7 +202,7 @@
 			"extract_cycle_time": 0.0,
 			"fueled_power_boost": 0.0,
 			"items_per_cycle": 0,
-			"power_consumption": 0.0,
+			"power_consumption": 0.1,
 			"power_consumption_exponent": 1.321929,
 			"power_production": 0.0,
 			"production_boost_power_consumption_exponent": 2.0,
@@ -322,7 +322,7 @@
 			"extract_cycle_time": 0.0,
 			"fueled_power_boost": 0.0,
 			"items_per_cycle": 0,
-			"power_consumption": 0.0,
+			"power_consumption": 0.1,
 			"power_consumption_exponent": 1.321929,
 			"power_production": 0.0,
 			"production_boost_power_consumption_exponent": 2.0,
@@ -1833,38 +1833,6 @@
 			"energy_value": 0.0,
 			"form": "RF_SOLID",
 			"resource_sink_points": 2
-		},
-		"Desc_XmasDataCartridge1_C": {
-			"category": "FGItemDescriptor",
-			"classname": "Desc_XmasDataCartridge1_C",
-			"display_name": "FICSMAS\u6570\u636e\u5361\u5e26\u7b2c1\u5929",
-			"energy_value": 0.0,
-			"form": "RF_SOLID",
-			"resource_sink_points": 0
-		},
-		"Desc_XmasDataCartridge2_C": {
-			"category": "FGItemDescriptor",
-			"classname": "Desc_XmasDataCartridge2_C",
-			"display_name": "FICSMAS\u6570\u636e\u5361\u5e26\u7b2c4\u5929",
-			"energy_value": 0.0,
-			"form": "RF_SOLID",
-			"resource_sink_points": 0
-		},
-		"Desc_XmasDataCartridge3_C": {
-			"category": "FGItemDescriptor",
-			"classname": "Desc_XmasDataCartridge3_C",
-			"display_name": "FICSMAS\u6570\u636e\u5361\u5e26\u7b2c8\u5929",
-			"energy_value": 0.0,
-			"form": "RF_SOLID",
-			"resource_sink_points": 0
-		},
-		"Desc_XmasDataCartridge4_C": {
-			"category": "FGItemDescriptor",
-			"classname": "Desc_XmasDataCartridge4_C",
-			"display_name": "FICSMAS\u6570\u636e\u5361\u5e26\u7b2c14\u5929",
-			"energy_value": 0.0,
-			"form": "RF_SOLID",
-			"resource_sink_points": 0
 		},
 		"Desc_XmasStar_C": {
 			"category": "FGItemDescriptor",
@@ -5177,27 +5145,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_Beam_Cross_C": {
-			"classname": "Recipe_Beam_Cross_C",
-			"display_name": "\u6a2a\u6881",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_SteelPlate_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Beam_Cross_C": 1
-			},
-			"raw_sink_points_gain": -64.0,
-			"sinkable_points_gain": -64.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_Beam_H_C": {
 			"classname": "Recipe_Beam_H_C",
 			"display_name": "\u5de5\u5b57\u6881",
@@ -7796,54 +7743,6 @@
 			},
 			"raw_sink_points_gain": 90.0,
 			"sinkable_points_gain": 90.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_FluidTruckStation_C": {
-			"classname": "Recipe_FluidTruckStation_C",
-			"display_name": "\u6db2\u4f53\u5361\u8f66\u7ad9",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_ModularFrame_C": 15,
-				"Desc_Plastic_C": 50,
-				"Desc_Rubber_C": 20,
-				"Desc_Stator_C": 20
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_FluidTruckStation_C": 1
-			},
-			"raw_sink_points_gain": -15870.0,
-			"sinkable_points_gain": -15870.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_FluidTruck_C": {
-			"classname": "Recipe_FluidTruck_C",
-			"display_name": "\u6db2\u4f53\u5361\u8f66",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_ModularFrame_C": 20,
-				"Desc_Motor_C": 15,
-				"Desc_Plastic_C": 50,
-				"Desc_SteelPlateReinforced_C": 20
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_FluidTruck_C": 1
-			},
-			"raw_sink_points_gain": -45270.0,
-			"sinkable_points_gain": -45270.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -11514,27 +11413,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_PipelineJunction_T_C": {
-			"classname": "Recipe_PipelineJunction_T_C",
-			"display_name": "\u7ba1\u9053T\u578b\u4ea4\u53c9\u63a5\u5934",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_CopperSheet_C": 5
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_PipelineJunction_T_C": 1
-			},
-			"raw_sink_points_gain": -120.0,
-			"sinkable_points_gain": -120.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_PipelineMK2_C": {
 			"classname": "Recipe_PipelineMK2_C",
 			"display_name": "2\u7ea7\u7ba1\u9053",
@@ -11777,30 +11655,6 @@
 			},
 			"raw_sink_points_gain": 28.0,
 			"sinkable_points_gain": 28.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_PortalPotty_C": {
-			"classname": "Recipe_PortalPotty_C",
-			"display_name": "SPWN",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_GenericBiomass_C": 100,
-				"Desc_ModularFrame_C": 5,
-				"Desc_SAMIngot_C": 20,
-				"Desc_SteelPipe_C": 20
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_PortalPotty_C": 1
-			},
-			"raw_sink_points_gain": -6920.0,
-			"sinkable_points_gain": -6920.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -17550,50 +17404,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_Stairs_Left_01_C": {
-			"classname": "Recipe_Stairs_Left_01_C",
-			"display_name": "\u697c\u68af\uff08\u5de6\uff09",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 3,
-				"Desc_IronPlate_C": 3
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Stairs_Left_01_C": 1
-			},
-			"raw_sink_points_gain": -54.0,
-			"sinkable_points_gain": -54.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_Stairs_Right_01_C": {
-			"classname": "Recipe_Stairs_Right_01_C",
-			"display_name": "\u697c\u68af\uff08\u53f3\uff09",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Cement_C": 3,
-				"Desc_IronPlate_C": 3
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_Stairs_Right_01_C": 1
-			},
-			"raw_sink_points_gain": -54.0,
-			"sinkable_points_gain": -54.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_StandaloneWidgetSign_Huge_C": {
 			"classname": "Recipe_StandaloneWidgetSign_Huge_C",
 			"display_name": "\u5927\u578b\u544a\u793a\u724c",
@@ -19126,101 +18936,6 @@
 			},
 			"raw_sink_points_gain": -496.0,
 			"sinkable_points_gain": -496.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_Explorer_C": {
-			"classname": "Recipe_VehiclePath_Explorer_C",
-			"display_name": "\u63a2\u9669\u5bb6\u8f7d\u5177\u8def\u5f84",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_Explorer_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_FactoryCart_C": {
-			"classname": "Recipe_VehiclePath_FactoryCart_C",
-			"display_name": "\u5de5\u5382\u8f66\u8f7d\u5177\u8def\u5f84",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_FactoryCart_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_Tractor_C": {
-			"classname": "Recipe_VehiclePath_Tractor_C",
-			"display_name": "\u7275\u5f15\u8f66\u8f7d\u5177\u8def\u5f84",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_Tractor_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_Truck_C": {
-			"classname": "Recipe_VehiclePath_Truck_C",
-			"display_name": "\u5361\u8f66\u8f7d\u5177\u8def\u5f84",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_Truck_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_VehiclePath_Universal_C": {
-			"classname": "Recipe_VehiclePath_Universal_C",
-			"display_name": "\u901a\u7528\u8f7d\u5177\u8def\u5f84",
-			"global_limit": -1,
-			"ingredients": {},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 1.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_BuildGun_C"
-			],
-			"products": {
-				"Desc_VehiclePath_Universal_C": 1
-			},
-			"raw_sink_points_gain": 0.0,
-			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
@@ -21208,90 +20923,6 @@
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 1.0
 		},
-		"Recipe_XmasDataCartridge1_C": {
-			"classname": "Recipe_XmasDataCartridge1_C",
-			"display_name": "FICSMAS\u6570\u636e\u5361\u5e26\u7b2c1\u5929",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Gift_C": 1
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 12.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_WorkshopComponent_C"
-			],
-			"products": {
-				"Desc_XmasDataCartridge1_C": 1
-			},
-			"raw_sink_points_gain": -1.0,
-			"sinkable_points_gain": -1.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_XmasDataCartridge2_C": {
-			"classname": "Recipe_XmasDataCartridge2_C",
-			"display_name": "FICSMAS\u6570\u636e\u5361\u5e26\u7b2c4\u5929",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Gift_C": 4
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 12.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_WorkshopComponent_C"
-			],
-			"products": {
-				"Desc_XmasDataCartridge2_C": 1
-			},
-			"raw_sink_points_gain": -4.0,
-			"sinkable_points_gain": -4.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_XmasDataCartridge3_C": {
-			"classname": "Recipe_XmasDataCartridge3_C",
-			"display_name": "FICSMAS\u6570\u636e\u5361\u5e26\u7b2c8\u5929",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Gift_C": 8
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 12.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_WorkshopComponent_C"
-			],
-			"products": {
-				"Desc_XmasDataCartridge3_C": 1
-			},
-			"raw_sink_points_gain": -8.0,
-			"sinkable_points_gain": -8.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
-		"Recipe_XmasDataCartridge4_C": {
-			"classname": "Recipe_XmasDataCartridge4_C",
-			"display_name": "FICSMAS\u6570\u636e\u5361\u5e26\u7b2c14\u5929",
-			"global_limit": -1,
-			"ingredients": {
-				"Desc_Gift_C": 14
-			},
-			"is_resource_proxy": false,
-			"manufacturing_duration": 12.0,
-			"overclockable": true,
-			"produced_in": [
-				"BP_WorkshopComponent_C"
-			],
-			"products": {
-				"Desc_XmasDataCartridge4_C": 1
-			},
-			"raw_sink_points_gain": -14.0,
-			"sinkable_points_gain": -14.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 1.0
-		},
 		"Recipe_XmasStar_C": {
 			"classname": "Recipe_XmasStar_C",
 			"display_name": "FICSMAS\u8bb8\u613f\u661f",
@@ -21458,16 +21089,16 @@
 			"global_limit": 15,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Coal_C": 0.5
+				"Desc_Coal_C": 1
 			},
-			"raw_sink_points_gain": 1.5,
-			"sinkable_points_gain": 1.5,
+			"raw_sink_points_gain": 3.0,
+			"sinkable_points_gain": 3.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21483,7 +21114,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Coal_C": 1.0
+				"Desc_Coal_C": 1
 			},
 			"raw_sink_points_gain": 3.0,
 			"sinkable_points_gain": 3.0,
@@ -21496,16 +21127,16 @@
 			"global_limit": 16,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Coal_C": 2.0
+				"Desc_Coal_C": 1
 			},
-			"raw_sink_points_gain": 6.0,
-			"sinkable_points_gain": 6.0,
+			"raw_sink_points_gain": 3.0,
+			"sinkable_points_gain": 3.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21515,16 +21146,16 @@
 			"global_limit": 5,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreBauxite_C": 0.5
+				"Desc_OreBauxite_C": 1
 			},
-			"raw_sink_points_gain": 4.0,
-			"sinkable_points_gain": 4.0,
+			"raw_sink_points_gain": 8.0,
+			"sinkable_points_gain": 8.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21540,7 +21171,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreBauxite_C": 1.0
+				"Desc_OreBauxite_C": 1
 			},
 			"raw_sink_points_gain": 8.0,
 			"sinkable_points_gain": 8.0,
@@ -21553,16 +21184,16 @@
 			"global_limit": 6,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreBauxite_C": 2.0
+				"Desc_OreBauxite_C": 1
 			},
-			"raw_sink_points_gain": 16.0,
-			"sinkable_points_gain": 16.0,
+			"raw_sink_points_gain": 8.0,
+			"sinkable_points_gain": 8.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21572,16 +21203,16 @@
 			"global_limit": 13,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreCopper_C": 0.5
+				"Desc_OreCopper_C": 1
 			},
-			"raw_sink_points_gain": 1.5,
-			"sinkable_points_gain": 1.5,
+			"raw_sink_points_gain": 3.0,
+			"sinkable_points_gain": 3.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21597,7 +21228,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreCopper_C": 1.0
+				"Desc_OreCopper_C": 1
 			},
 			"raw_sink_points_gain": 3.0,
 			"sinkable_points_gain": 3.0,
@@ -21610,16 +21241,35 @@
 			"global_limit": 13,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreCopper_C": 2.0
+				"Desc_OreCopper_C": 1
 			},
-			"raw_sink_points_gain": 6.0,
-			"sinkable_points_gain": 6.0,
+			"raw_sink_points_gain": 3.0,
+			"sinkable_points_gain": 3.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"ResourceNode-Build_MinerMk3_C-Desc_OreGold_C-Impure": {
+			"classname": "ResourceNode-Build_MinerMk3_C-Desc_OreGold_C-Impure",
+			"display_name": "3\u7ea7\u91c7\u77ff\u673a (\u94a6\u91d1\u77ff\u77f3, Impure)",
+			"global_limit": 0,
+			"ingredients": {},
+			"is_resource_proxy": true,
+			"manufacturing_duration": 0.5,
+			"overclockable": true,
+			"produced_in": [
+				"Build_MinerMk3_C"
+			],
+			"products": {
+				"Desc_OreGold_C": 1
+			},
+			"raw_sink_points_gain": 7.0,
+			"sinkable_points_gain": 7.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21635,7 +21285,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreGold_C": 1.0
+				"Desc_OreGold_C": 1
 			},
 			"raw_sink_points_gain": 7.0,
 			"sinkable_points_gain": 7.0,
@@ -21648,16 +21298,16 @@
 			"global_limit": 8,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreGold_C": 2.0
+				"Desc_OreGold_C": 1
 			},
-			"raw_sink_points_gain": 14.0,
-			"sinkable_points_gain": 14.0,
+			"raw_sink_points_gain": 7.0,
+			"sinkable_points_gain": 7.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21667,16 +21317,16 @@
 			"global_limit": 39,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreIron_C": 0.5
+				"Desc_OreIron_C": 1
 			},
-			"raw_sink_points_gain": 0.5,
-			"sinkable_points_gain": 0.5,
+			"raw_sink_points_gain": 1.0,
+			"sinkable_points_gain": 1.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21692,7 +21342,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreIron_C": 1.0
+				"Desc_OreIron_C": 1
 			},
 			"raw_sink_points_gain": 1.0,
 			"sinkable_points_gain": 1.0,
@@ -21705,16 +21355,16 @@
 			"global_limit": 46,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreIron_C": 2.0
+				"Desc_OreIron_C": 1
 			},
-			"raw_sink_points_gain": 2.0,
-			"sinkable_points_gain": 2.0,
+			"raw_sink_points_gain": 1.0,
+			"sinkable_points_gain": 1.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21724,16 +21374,16 @@
 			"global_limit": 3,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreUranium_C": 0.5
+				"Desc_OreUranium_C": 1
 			},
-			"raw_sink_points_gain": 17.5,
-			"sinkable_points_gain": 17.5,
+			"raw_sink_points_gain": 35.0,
+			"sinkable_points_gain": 35.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21749,7 +21399,26 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_OreUranium_C": 1.0
+				"Desc_OreUranium_C": 1
+			},
+			"raw_sink_points_gain": 35.0,
+			"sinkable_points_gain": 35.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"ResourceNode-Build_MinerMk3_C-Desc_OreUranium_C-Pure": {
+			"classname": "ResourceNode-Build_MinerMk3_C-Desc_OreUranium_C-Pure",
+			"display_name": "3\u7ea7\u91c7\u77ff\u673a (\u94c0, Pure)",
+			"global_limit": 0,
+			"ingredients": {},
+			"is_resource_proxy": true,
+			"manufacturing_duration": 0.125,
+			"overclockable": true,
+			"produced_in": [
+				"Build_MinerMk3_C"
+			],
+			"products": {
+				"Desc_OreUranium_C": 1
 			},
 			"raw_sink_points_gain": 35.0,
 			"sinkable_points_gain": 35.0,
@@ -21762,16 +21431,16 @@
 			"global_limit": 3,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_RawQuartz_C": 0.5
+				"Desc_RawQuartz_C": 1
 			},
-			"raw_sink_points_gain": 7.5,
-			"sinkable_points_gain": 7.5,
+			"raw_sink_points_gain": 15.0,
+			"sinkable_points_gain": 15.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21787,7 +21456,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_RawQuartz_C": 1.0
+				"Desc_RawQuartz_C": 1
 			},
 			"raw_sink_points_gain": 15.0,
 			"sinkable_points_gain": 15.0,
@@ -21800,16 +21469,16 @@
 			"global_limit": 7,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_RawQuartz_C": 2.0
+				"Desc_RawQuartz_C": 1
 			},
-			"raw_sink_points_gain": 30.0,
-			"sinkable_points_gain": 30.0,
+			"raw_sink_points_gain": 15.0,
+			"sinkable_points_gain": 15.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21819,16 +21488,16 @@
 			"global_limit": 10,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_SAM_C": 0.5
+				"Desc_SAM_C": 1
 			},
-			"raw_sink_points_gain": 10.0,
-			"sinkable_points_gain": 10.0,
+			"raw_sink_points_gain": 20.0,
+			"sinkable_points_gain": 20.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21844,7 +21513,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_SAM_C": 1.0
+				"Desc_SAM_C": 1
 			},
 			"raw_sink_points_gain": 20.0,
 			"sinkable_points_gain": 20.0,
@@ -21857,16 +21526,16 @@
 			"global_limit": 3,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_SAM_C": 2.0
+				"Desc_SAM_C": 1
 			},
-			"raw_sink_points_gain": 40.0,
-			"sinkable_points_gain": 40.0,
+			"raw_sink_points_gain": 20.0,
+			"sinkable_points_gain": 20.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21876,16 +21545,16 @@
 			"global_limit": 15,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Stone_C": 0.5
+				"Desc_Stone_C": 1
 			},
-			"raw_sink_points_gain": 1.0,
-			"sinkable_points_gain": 1.0,
+			"raw_sink_points_gain": 2.0,
+			"sinkable_points_gain": 2.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21901,7 +21570,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Stone_C": 1.0
+				"Desc_Stone_C": 1
 			},
 			"raw_sink_points_gain": 2.0,
 			"sinkable_points_gain": 2.0,
@@ -21914,16 +21583,16 @@
 			"global_limit": 29,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Stone_C": 2.0
+				"Desc_Stone_C": 1
 			},
-			"raw_sink_points_gain": 4.0,
-			"sinkable_points_gain": 4.0,
+			"raw_sink_points_gain": 2.0,
+			"sinkable_points_gain": 2.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21933,16 +21602,16 @@
 			"global_limit": 6,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Sulfur_C": 0.5
+				"Desc_Sulfur_C": 1
 			},
-			"raw_sink_points_gain": 5.5,
-			"sinkable_points_gain": 5.5,
+			"raw_sink_points_gain": 11.0,
+			"sinkable_points_gain": 11.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21958,7 +21627,7 @@
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Sulfur_C": 1.0
+				"Desc_Sulfur_C": 1
 			},
 			"raw_sink_points_gain": 11.0,
 			"sinkable_points_gain": 11.0,
@@ -21971,16 +21640,16 @@
 			"global_limit": 5,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 0.25,
+			"manufacturing_duration": 0.125,
 			"overclockable": true,
 			"produced_in": [
 				"Build_MinerMk3_C"
 			],
 			"products": {
-				"Desc_Sulfur_C": 2.0
+				"Desc_Sulfur_C": 1
 			},
-			"raw_sink_points_gain": 22.0,
-			"sinkable_points_gain": 22.0,
+			"raw_sink_points_gain": 11.0,
+			"sinkable_points_gain": 11.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
@@ -21990,15 +21659,15 @@
 			"global_limit": 10,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 1.0,
+			"manufacturing_duration": 2.0,
 			"overclockable": true,
 			"produced_in": [
 				"Build_OilPump_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 1000.0
+				"Desc_LiquidOil_C": 2000
 			},
-			"raw_sink_points_gain": 30.0,
+			"raw_sink_points_gain": 60.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
@@ -22015,7 +21684,7 @@
 				"Build_OilPump_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 2000.0
+				"Desc_LiquidOil_C": 2000
 			},
 			"raw_sink_points_gain": 60.0,
 			"sinkable_points_gain": 0.0,
@@ -22028,15 +21697,15 @@
 			"global_limit": 8,
 			"ingredients": {},
 			"is_resource_proxy": true,
-			"manufacturing_duration": 1.0,
+			"manufacturing_duration": 0.5,
 			"overclockable": true,
 			"produced_in": [
 				"Build_OilPump_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 4000.0
+				"Desc_LiquidOil_C": 2000
 			},
-			"raw_sink_points_gain": 120.0,
+			"raw_sink_points_gain": 60.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
@@ -22053,7 +21722,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 6000
+				"Desc_LiquidOil_C": 6000.0
 			},
 			"raw_sink_points_gain": 180.0,
 			"sinkable_points_gain": 0.0,
@@ -22072,7 +21741,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 9000
+				"Desc_LiquidOil_C": 9000.0
 			},
 			"raw_sink_points_gain": 270.0,
 			"sinkable_points_gain": 0.0,
@@ -22091,7 +21760,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_LiquidOil_C": 3000
+				"Desc_LiquidOil_C": 3000.0
 			},
 			"raw_sink_points_gain": 90.0,
 			"sinkable_points_gain": 0.0,
@@ -22110,7 +21779,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 11000
+				"Desc_NitrogenGas_C": 11000.0
 			},
 			"raw_sink_points_gain": 110.0,
 			"sinkable_points_gain": 0.0,
@@ -22129,7 +21798,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 10000
+				"Desc_NitrogenGas_C": 10000.0
 			},
 			"raw_sink_points_gain": 100.0,
 			"sinkable_points_gain": 0.0,
@@ -22148,9 +21817,28 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 12000
+				"Desc_NitrogenGas_C": 12000.0
 			},
 			"raw_sink_points_gain": 120.0,
+			"sinkable_points_gain": 0.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"ResourceWell-Build_FrackingSmasher_C-Desc_NitrogenGas_C-EasternDuneForest": {
+			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_NitrogenGas_C-EasternDuneForest",
+			"display_name": "\u8d44\u6e90\u4e95\u589e\u538b\u7ad9 (\u6c2e\u6c14, EasternDuneForest)",
+			"global_limit": 1,
+			"ingredients": {},
+			"is_resource_proxy": true,
+			"manufacturing_duration": 1,
+			"overclockable": true,
+			"produced_in": [
+				"Build_FrackingSmasher_C"
+			],
+			"products": {
+				"Desc_NitrogenGas_C": 20000.0
+			},
+			"raw_sink_points_gain": 200.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
@@ -22167,7 +21855,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 14000
+				"Desc_NitrogenGas_C": 14000.0
 			},
 			"raw_sink_points_gain": 140.0,
 			"sinkable_points_gain": 0.0,
@@ -22186,28 +21874,9 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_NitrogenGas_C": 13000
+				"Desc_NitrogenGas_C": 13000.0
 			},
 			"raw_sink_points_gain": 130.0,
-			"sinkable_points_gain": 0.0,
-			"variable_power_consumption_constant": 0.0,
-			"variable_power_consumption_factor": 0.0
-		},
-		"ResourceWell-Build_FrackingSmasher_C-Desc_NitrogenGas_C-TitanForest": {
-			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_NitrogenGas_C-TitanForest",
-			"display_name": "\u8d44\u6e90\u4e95\u589e\u538b\u7ad9 (\u6c2e\u6c14, TitanForest)",
-			"global_limit": 1,
-			"ingredients": {},
-			"is_resource_proxy": true,
-			"manufacturing_duration": 1,
-			"overclockable": true,
-			"produced_in": [
-				"Build_FrackingSmasher_C"
-			],
-			"products": {
-				"Desc_NitrogenGas_C": 20000
-			},
-			"raw_sink_points_gain": 200.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
@@ -22224,7 +21893,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 10500
+				"Desc_Water_C": 10500.0
 			},
 			"raw_sink_points_gain": 52.5,
 			"sinkable_points_gain": 0.0,
@@ -22243,7 +21912,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 10000
+				"Desc_Water_C": 10000.0
 			},
 			"raw_sink_points_gain": 50.0,
 			"sinkable_points_gain": 0.0,
@@ -22262,7 +21931,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 10000
+				"Desc_Water_C": 10000.0
 			},
 			"raw_sink_points_gain": 50.0,
 			"sinkable_points_gain": 0.0,
@@ -22281,16 +21950,16 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 7000
+				"Desc_Water_C": 7000.0
 			},
 			"raw_sink_points_gain": 35.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
-		"ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-Grassfield": {
-			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-Grassfield",
-			"display_name": "\u8d44\u6e90\u4e95\u589e\u538b\u7ad9 (\u6c34, Grassfield)",
+		"ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-GrassField": {
+			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-GrassField",
+			"display_name": "\u8d44\u6e90\u4e95\u589e\u538b\u7ad9 (\u6c34, GrassField)",
 			"global_limit": 1,
 			"ingredients": {},
 			"is_resource_proxy": true,
@@ -22300,7 +21969,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 11000
+				"Desc_Water_C": 11000.0
 			},
 			"raw_sink_points_gain": 55.0,
 			"sinkable_points_gain": 0.0,
@@ -22319,7 +21988,7 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 13000
+				"Desc_Water_C": 13000.0
 			},
 			"raw_sink_points_gain": 65.0,
 			"sinkable_points_gain": 0.0,
@@ -22338,16 +22007,16 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 12000
+				"Desc_Water_C": 12000.0
 			},
 			"raw_sink_points_gain": 60.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},
-		"ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-WestDuneForest": {
-			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-WestDuneForest",
-			"display_name": "\u8d44\u6e90\u4e95\u589e\u538b\u7ad9 (\u6c34, WestDuneForest)",
+		"ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-WesternDuneForest": {
+			"classname": "ResourceWell-Build_FrackingSmasher_C-Desc_Water_C-WesternDuneForest",
+			"display_name": "\u8d44\u6e90\u4e95\u589e\u538b\u7ad9 (\u6c34, WesternDuneForest)",
 			"global_limit": 1,
 			"ingredients": {},
 			"is_resource_proxy": true,
@@ -22357,12 +22026,266 @@
 				"Build_FrackingSmasher_C"
 			],
 			"products": {
-				"Desc_Water_C": 14000
+				"Desc_Water_C": 14000.0
 			},
 			"raw_sink_points_gain": 70.0,
 			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		}
-	}
+	},
+	"resource_nodes": [
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreIron_C",
+			"display_name": "Desc_OreIron_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 39,
+			"normal": 42,
+			"pure": 46
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreGold_C",
+			"display_name": "Desc_OreGold_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 0,
+			"normal": 9,
+			"pure": 8
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreCopper_C",
+			"display_name": "Desc_OreCopper_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 13,
+			"normal": 29,
+			"pure": 13
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_Stone_C",
+			"display_name": "Desc_Stone_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 15,
+			"normal": 50,
+			"pure": 29
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_Coal_C",
+			"display_name": "Desc_Coal_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 15,
+			"normal": 31,
+			"pure": 16
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_RawQuartz_C",
+			"display_name": "Desc_RawQuartz_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 3,
+			"normal": 7,
+			"pure": 7
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_Sulfur_C",
+			"display_name": "Desc_Sulfur_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 6,
+			"normal": 5,
+			"pure": 5
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreUranium_C",
+			"display_name": "Desc_OreUranium_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 3,
+			"normal": 2,
+			"pure": 0
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_OreBauxite_C",
+			"display_name": "Desc_OreBauxite_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 5,
+			"normal": 6,
+			"pure": 6
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_SAM_C",
+			"display_name": "Desc_SAM_C",
+			"extractor": "Build_MinerMk3_C",
+			"impure": 10,
+			"normal": 6,
+			"pure": 3
+		},
+		{
+			"base_rate": 120,
+			"classname": "Desc_LiquidOil_C",
+			"display_name": "Desc_LiquidOil_C",
+			"extractor": "Build_OilPump_C",
+			"impure": 10,
+			"normal": 12,
+			"pure": 8
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_LiquidOil_C",
+			"display_name": "Islands",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 3,
+			"pure": 1
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_LiquidOil_C",
+			"display_name": "RedBambooFields",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 3,
+			"pure": 3
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_LiquidOil_C",
+			"display_name": "Swamp",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 6,
+			"normal": 0,
+			"pure": 0
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "DuneDesert",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 2,
+			"pure": 5
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "AbyssCliff",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 2,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "EasternDuneForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 0,
+			"pure": 10
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "BlueCrater",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 2,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "JungleSpires",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 0,
+			"pure": 7
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_NitrogenGas_C",
+			"display_name": "RockyDesert",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 1,
+			"pure": 6
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "DuneDesertNorth",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 1,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "DuneDesertSouth",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 2,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "DesertCanyons",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 1,
+			"normal": 2,
+			"pure": 4
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "TitanForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 0,
+			"pure": 6
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "EasternDuneForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 6,
+			"pure": 0
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "GrassField",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 2,
+			"normal": 0,
+			"pure": 5
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "SnaketreeForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 1,
+			"pure": 6
+		},
+		{
+			"base_rate": 60000,
+			"classname": "Desc_Water_C",
+			"display_name": "WesternDuneForest",
+			"extractor": "Build_FrackingSmasher_C",
+			"impure": 0,
+			"normal": 0,
+			"pure": 7
+		}
+	]
 }

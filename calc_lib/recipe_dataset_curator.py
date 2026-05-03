@@ -233,43 +233,64 @@ class RecipeDatasetCurator(RecipeDataset):
 	def _add_resource_proxy_recipes(self, data: dict[str, dict[str]]) -> None:
 		# add resource extraction as 'recipes' to the recipe collection
 		self._add_resource_node_proxy_recipes()
-		self._add_resource_well_proxy_recipes()
 		self._add_unrestrained_resource_proxy_recipes()
 		self._add_geothermal_proxy_recipes()
 		return
 
 	def _add_resource_node_proxy_recipes(self) -> None:
-		for itemclass, purity_counts in config.RESOURCE_NODE_CONFIG.items():
-			item = self.items[itemclass]
-			for b in config.RESOURCE_NODE_EXTRACTOR_CONFIG[itemclass]:
-				# extractor object
-				extractor = self.buildings[b]
-				#
-				# add per purity, count as recipe global limit
-				for purity, count in purity_counts.items():
-					purity_config = config.RESOURCE_NODE_PURITY_CONFIG[purity]
-
-					if count <= 0:
-						continue  # skip if no node at this purity level
+		purity_config = config.RESOURCE_NODE_PURITY_CONFIG
+		for node in self.resource_nodes:
+			if node.extractor != config.RESOURCE_WELL_ACTIVATOR:
+				# regular resource node by purity
+				for purity in purity_config.keys():
+					# recipe object
+					item = self.items[node.resource]
+					if item.is_fluid:
+						amount = 1000.0
+					else:
+						amount = 1.0
+					extractor = self.buildings[node.extractor]
 
 					recipe = self.CuratedRecipe(
 						classname=("ResourceNode-{}-{}-{}").format(
-							extractor.classname, item.classname, purity_config["label"],
+							node.extractor, node.resource, purity_config[purity]["label"],
 						),
 						display_name=("{} ({}, {})").format(
-							extractor.display_name, item.display_name, purity_config["label"],
+							extractor.display_name,
+							item.display_name,
+							purity_config[purity]["label"],
 						),
 						ingredients=dict(),
-						products={item.classname: extractor.items_per_cycle
-							* purity_config["multiplier"]
-						},
-						manufacturing_duration=extractor.extract_cycle_time,
-						produced_in=[extractor.classname],
-						global_limit=count,
+						products={node.classname: extractor.items_per_cycle},
+						manufacturing_duration=extractor.extract_cycle_time /
+							purity_config[purity]["multiplier"],
+						produced_in=[node.extractor],
+						global_limit=getattr(node, purity),
 						is_resource_proxy=True,
 					)
 
 					self.add(recipe)
+			else:
+				# resource well by cluster
+				recipe = self.CuratedRecipe(
+					classname=("ResourceWell-{}-{}-{}").format(
+						node.extractor, node.resource, node.display_name,
+					),
+					display_name=("{} ({}, {})").format(
+						self.buildings[node.extractor].display_name,
+						self.items[node.resource].display_name,
+						node.display_name,
+					),
+					ingredients=dict(),
+					products={node.classname: node.extractable_amount() / 60},
+					manufacturing_duration=1,
+					produced_in=[node.extractor],
+					global_limit=1,
+					is_resource_proxy=True,
+				)
+
+				self.add(recipe)
+
 		return
 
 	def _add_resource_well_proxy_recipes(self) -> None:

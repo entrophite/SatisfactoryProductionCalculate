@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
+import collections
+import functools
 import itertools
 import pdb
 from typing import Self
 
 import pandas
 
-from .elements import ClockSpeed, Recipe, Building, Item
+from .elements import ClockSpeed, Recipe, Building, Item, ResourceNode
 from .recipe_dataset import RecipeDataset
 from . import config
 
@@ -15,6 +17,7 @@ class RecipeMatrix(object):
 	def __init__(self, recipe_dataset: RecipeDataset, *ka,
 		production_clock_speed: ClockSpeed = ClockSpeed(100),
 		resource_extraction_clock_speed: ClockSpeed = ClockSpeed(250),
+		resource_purity_override: ResourceNode.PurityOverride = ResourceNode.PurityOverride.DEFAULT,
 		ingredient_multiplier: float = 1.0,
 		power_consumption_multiplier: float = 1.0,
 		with_somersloop: bool = False, **kw,
@@ -25,6 +28,9 @@ class RecipeMatrix(object):
 		self.production_clock_speed: ClockSpeed = ClockSpeed(production_clock_speed)
 		self.resource_extraction_clock_speed: ClockSpeed = ClockSpeed(
 			resource_extraction_clock_speed)
+		self.resource_purity_override: ResourceNode.PurityOverride = resource_purity_override
+		self._global_resource_limits: collections.defaultdict[str, float] \
+			= collections.defaultdict(float)
 		self.ingredient_multiplier: float = ingredient_multiplier
 		self.power_consumption_multiplier: float = power_consumption_multiplier
 		self.with_somersloop: bool = with_somersloop
@@ -34,8 +40,45 @@ class RecipeMatrix(object):
 		# the global production limit for each recipe
 		# may be used for resource extraction limits
 		self.global_limit: pandas.Series = None
+		# apply resource purity override
+		self._apply_resource_purity_override()
 		# construct .coef_matrix and .global_limit
 		self._construct_matrices()
+		return
+
+	def _apply_resource_purity_override(self) -> None:
+		# apply override to self.recipe_dataset.resouce_nodes
+		resource_nodes = [node.purity_override(self.resource_purity_override)
+			for node in self.recipe_dataset.resource_nodes]
+		self.recipe_dataset.resource_nodes = resource_nodes
+
+		for node in self.recipe_dataset.resource_nodes:
+			itemclass = node.resource
+			if node.extractor != config.RESOURCE_WELL_ACTIVATOR:
+				# regular resource node, apply global limit override
+				for purity, purity_config in config.RESOURCE_NODE_PURITY_CONFIG.items():
+					classname = ("ResourceNode-{}-{}-{}").format(
+						node.extractor, node.resource, purity_config["label"],
+					)
+					recipe = self.recipe_dataset.recipes[classname]
+					recipe.global_limit = getattr(node, purity)
+					# calculate contribution to the global resource limit
+					self._global_resource_limits[itemclass] += \
+						recipe.products[itemclass] \
+						/ recipe.manufacturing_duration \
+						* recipe.global_limit
+			else:
+				# resource well, apply per cluster
+				classname = ("ResourceWell-{}-{}-{}").format(
+					node.extractor, node.resource, node.display_name,
+				)
+				recipe = self.recipe_dataset.recipes[classname]
+				recipe.products[node.resource] = node.extractable_amount() / 60
+				# calculate contribution to the global resource limit
+				self._global_resource_limits[itemclass] += \
+					recipe.products[itemclass] \
+					/ recipe.manufacturing_duration \
+					* recipe.global_limit
 		return
 
 	def _construct_matrices(self) -> None:
@@ -62,6 +105,7 @@ class RecipeMatrix(object):
 	def from_curated_recipe_dataset_json(cls, fname: str, *,
 		production_clock_speed: ClockSpeed = ClockSpeed(100),
 		resource_extraction_clock_speed: ClockSpeed = ClockSpeed(250),
+		resource_purity_override: ResourceNode.PurityOverride = ResourceNode.PurityOverride.DEFAULT,
 		ingredient_multiplier: float = 1.0,
 		power_consumption_multiplier: float = 1.0,
 		with_somersloop: bool = False,
@@ -69,6 +113,7 @@ class RecipeMatrix(object):
 		ret = cls(RecipeDataset.from_json(fname),
 			production_clock_speed=production_clock_speed,
 			resource_extraction_clock_speed=resource_extraction_clock_speed,
+			resource_purity_override=resource_purity_override,
 			ingredient_multiplier=ingredient_multiplier,
 			power_consumption_multiplier=power_consumption_multiplier,
 			with_somersloop=with_somersloop,
@@ -120,7 +165,7 @@ class RecipeMatrix(object):
 		if not recipe.overclockable:
 			clock_speeds = [ClockSpeed(100)]
 		else:
-			if recipe.is_resource_proxy:
+			if recipe.is_resource_proxy and recipe.global_limit >= 0:
 				# also ensures there is only one clock speed for resources
 				clock_speeds = [resource_clock_speed]
 			else:
@@ -169,3 +214,10 @@ class RecipeMatrix(object):
 				if recipe_global_limit < 0 else recipe_global_limit
 
 		return
+
+	@functools.cached_property
+	def global_resource_limits(self) -> dict[str, float]:
+		ret = {k: v * self.resource_extraction_clock_speed / 100 * 60
+			for k, v in self._global_resource_limits.items()}
+		ret["Desc_Water_C"] = -1
+		return ret

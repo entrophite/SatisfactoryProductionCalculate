@@ -11,7 +11,7 @@ import pandas
 
 from . import util
 from . import config
-from .elements import ClockSpeed
+from .elements import ClockSpeed, ResourceNode
 from .recipe_matrix import RecipeMatrix
 
 
@@ -20,6 +20,7 @@ class ProductionCalculator(object):
 	def from_recipe_dataset_json(cls, fname: str, *,
 		production_clock_speed: int = ClockSpeed(250),
 		resource_extraction_clock_speed: int = ClockSpeed(250),
+		resource_purity_override: ResourceNode.PurityOverride = ResourceNode.PurityOverride.DEFAULT,
 		ingredient_multiplier: float = 1.0,
 		power_consumption_multiplier: float = 1.0,
 		enable_resource_conversion: bool = False,
@@ -30,6 +31,7 @@ class ProductionCalculator(object):
 		recipe_matrix = RecipeMatrix.from_curated_recipe_dataset_json(fname,
 			production_clock_speed=production_clock_speed,
 			resource_extraction_clock_speed=resource_extraction_clock_speed,
+			resource_purity_override=resource_purity_override,
 			ingredient_multiplier=ingredient_multiplier,
 			power_consumption_multiplier=power_consumption_multiplier,
 			with_somersloop=enable_somersloop_amplification,
@@ -295,7 +297,9 @@ class ProductionCalculator(object):
 			r, *_ = i.split("/")
 			if recipes[r].is_resource_proxy:
 				resource_proxy_recipes.append(i)
-		resource_itemclass_list = list(config.RESOURCE_GLOBAL_LIMIT.keys())
+		resource_itemclass_list = list(
+			self.recipe_matrix.global_resource_limits.keys()
+		)
 		# select x
 		positions = coef_matrix.index.get_indexer(resource_proxy_recipes)
 		x = self.result.x[positions]
@@ -311,7 +315,9 @@ class ProductionCalculator(object):
 				continue
 			item = items[itemclass]
 			rate_per_minute = item.rescale_amount(rate) * 60
-			global_limit = config.RESOURCE_GLOBAL_LIMIT[itemclass]
+			global_limit = self.recipe_matrix.global_resource_limits[itemclass]
+			if item.is_fluid:
+				global_limit /= 1000
 			if global_limit > 0:
 				perc = rate_per_minute / global_limit * 100
 				perc_str = util.simplify_decimal(perc, decimal=1) + "%"

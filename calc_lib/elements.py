@@ -2,8 +2,9 @@
 
 import copy
 import dataclasses
+import enum
 import pdb
-from typing import Optional
+from typing import Optional, Self
 
 from . import util
 from . import config
@@ -223,4 +224,68 @@ class Building(object):
 					* power_consumption_multiplier
 			else:
 				ret = base_power
+		return ret
+
+
+@dataclasses.dataclass
+class ResourceNode(object):
+	class PurityOverride(enum.IntEnum):
+		DEFAULT = 0
+		ALL_IMPURE = 1
+		ALL_NORMAL = 2
+		ALL_PURE = 3
+		DECREASE = 4
+		INCREASE = 5
+
+	classname: str = None
+	display_name: str = None
+	extractor: str = None
+	# resource info
+	pure: int = 0
+	normal: int = 0
+	impure: int = 0
+	#
+	base_rate: float = 240
+
+	def __post_init__(self):
+		if self.classname is None:
+			raise ValueError(f"classname must be provided for {type(self).__name__}")
+		if self.display_name is None:
+			self.display_name = self.classname
+		if self.extractor is None:
+			raise ValueError(f"extractor must be provided for {type(self).__name__}")
+		return
+
+	@property
+	def resource(self) -> str:
+		return self.classname
+
+	def extractable_amount(self, clock_speed: ClockSpeed = 100) -> int:
+		normal_eq = self.impure * 0.5 + self.normal + self.pure * 2
+		return normal_eq * self.base_rate * clock_speed / 100
+
+	def purity_override(self, override: PurityOverride) -> "ResourceNode":
+		ret = copy.deepcopy(self)
+		if override == self.PurityOverride.DEFAULT:
+			pass
+		elif override == self.PurityOverride.ALL_IMPURE:
+			ret.impure = self.impure + self.normal + self.pure
+			ret.normal = 0
+			ret.pure = 0
+		elif override == self.PurityOverride.ALL_NORMAL:
+			ret.impure = 0
+			ret.normal = self.impure + self.normal + self.pure
+			ret.pure = 0
+		elif override == self.PurityOverride.ALL_PURE:
+			ret.impure = 0
+			ret.normal = 0
+			ret.pure = self.impure + self.normal + self.pure
+		elif override == self.PurityOverride.DECREASE:
+			ret.impure = self.impure + self.normal
+			ret.normal = self.pure
+			ret.pure = 0
+		elif override == self.PurityOverride.INCREASE:
+			ret.impure = 0
+			ret.normal = self.impure
+			ret.pure = self.normal + self.pure
 		return ret
