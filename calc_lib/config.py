@@ -34,6 +34,7 @@ CURATOR_NATIVE_CLASSNAME_LIST_BUILDING = [
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGBuildableGeneratorGeoThermal'",
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGBuildableWaterPump'",
 	"/Script/CoreUObject.Class'/Script/FactoryGame.FGBuildableManufacturerVariablePower'",
+	"/Script/CoreUObject.Class'/Script/FactoryGame.FGBuildableSpaceElevator'",
 ]
 
 CURATOR_NATIVE_CLASSNAME_LIST_GENERATOR = [
@@ -46,6 +47,55 @@ CURATOR_NATIVE_CLASSNAME_LIST_POWERBOOSTER = [
 ]
 
 CURATOR_NATIVE_CLASSNAME_RESOURCE_SHORT = "FGResourceDescriptor"
+
+################################################################################
+# space elevator proxy recipes
+CURATOR_SPACE_ELEVATOR_PROXY_RECIPES = {
+	"produced_in": "Build_SpaceElevator_C",
+	"phases": [
+		{
+			"phase": 1,
+			"cost": {
+				"Desc_SpaceElevatorPart_1_C": 50,  # smart plating
+			},
+		},
+		{
+			"phase": 2,
+			"cost": {
+				"Desc_SpaceElevatorPart_1_C": 1000,  # smart plating
+				"Desc_SpaceElevatorPart_2_C": 1000,  # versatile framework
+				"Desc_SpaceElevatorPart_3_C": 100,  # automated wiring
+			},
+		},
+		{
+			"phase": 3,
+			"cost": {
+				"Desc_SpaceElevatorPart_2_C": 2500,  # versatile framework
+				"Desc_SpaceElevatorPart_4_C": 500,  # modular engine
+				"Desc_SpaceElevatorPart_5_C": 100,  # adaptive control unit
+			},
+		},
+		{
+			"phase": 4,
+			"cost": {
+				"Desc_SpaceElevatorPart_6_C": 500,  # magnetic field generator
+				"Desc_SpaceElevatorPart_7_C": 500,  # assembly director system
+				"Desc_SpaceElevatorPart_8_C": 250,  # thermal propulsion rocket
+				"Desc_SpaceElevatorPart_9_C": 100,  # nuclear pasta
+			},
+		},
+		{
+			"phase": 5,
+			"cost": {
+				"Desc_SpaceElevatorPart_9_C": 1000,  # nuclear pasta
+				"Desc_SpaceElevatorPart_10_C": 1000,  # biochemical sculptor
+				"Desc_SpaceElevatorPart_11_C": 200,  # ballistic warp drive
+				"Desc_SpaceElevatorPart_12_C": 256,  # ai expansion server
+			},
+		},
+	]
+}
+
 
 ################################################################################
 # resource node counts data can be found at:
@@ -224,4 +274,9 @@ INGREDIENT_MULTIPLIER_EXCLUDE_RECIPES = {
 	"Recipe_UnpackageSulfuricAcid_C",
 	"Recipe_UnpackageTurboFuel_C",
 	"Recipe_UnpackageWater_C",
+	"Build_SpaceElevator_C-Phase-1",
+	"Build_SpaceElevator_C-Phase-2",
+	"Build_SpaceElevator_C-Phase-3",
+	"Build_SpaceElevator_C-Phase-4",
+	"Build_SpaceElevator_C-Phase-5",
 }

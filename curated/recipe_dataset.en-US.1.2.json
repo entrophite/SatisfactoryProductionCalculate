@@ -345,6 +345,21 @@
 			"production_shard_slot_size": 0,
 			"variable_power_consumption": false
 		},
+		"Build_SpaceElevator_C": {
+			"base_power_boost": 0.0,
+			"classname": "Build_SpaceElevator_C",
+			"display_name": "Space Elevator",
+			"extract_cycle_time": 0.0,
+			"fueled_power_boost": 0.0,
+			"items_per_cycle": 0,
+			"power_consumption": 0.0,
+			"power_consumption_exponent": 1.6,
+			"power_production": 0.0,
+			"production_boost_power_consumption_exponent": 2.0,
+			"production_shard_boost_multiplier": 1.0,
+			"production_shard_slot_size": 0,
+			"variable_power_consumption": false
+		},
 		"Build_WaterPump_C": {
 			"base_power_boost": 0.0,
 			"classname": "Build_WaterPump_C",
@@ -465,6 +480,46 @@
 			"energy_value": 0.0,
 			"form": "RF_SOLID",
 			"resource_sink_points": 56
+		},
+		"Build_SpaceElevator_C-Phase-1-Objective-Dummy": {
+			"category": null,
+			"classname": "Build_SpaceElevator_C-Phase-1-Objective-Dummy",
+			"display_name": "Space Elevator (Phase 1)",
+			"energy_value": 0.0,
+			"form": "RF_SOLID",
+			"resource_sink_points": 26000
+		},
+		"Build_SpaceElevator_C-Phase-2-Objective-Dummy": {
+			"category": null,
+			"classname": "Build_SpaceElevator_C-Phase-2-Objective-Dummy",
+			"display_name": "Space Elevator (Phase 2)",
+			"energy_value": 0.0,
+			"form": "RF_SOLID",
+			"resource_sink_points": 1840000
+		},
+		"Build_SpaceElevator_C-Phase-3-Objective-Dummy": {
+			"category": null,
+			"classname": "Build_SpaceElevator_C-Phase-3-Objective-Dummy",
+			"display_name": "Space Elevator (Phase 3)",
+			"energy_value": 0.0,
+			"form": "RF_SOLID",
+			"resource_sink_points": 15556800
+		},
+		"Build_SpaceElevator_C-Phase-4-Objective-Dummy": {
+			"category": null,
+			"classname": "Build_SpaceElevator_C-Phase-4-Objective-Dummy",
+			"display_name": "Space Elevator (Phase 4)",
+			"energy_value": 0.0,
+			"form": "RF_SOLID",
+			"resource_sink_points": 491612600
+		},
+		"Build_SpaceElevator_C-Phase-5-Objective-Dummy": {
+			"category": null,
+			"classname": "Build_SpaceElevator_C-Phase-5-Objective-Dummy",
+			"display_name": "Space Elevator (Phase 5)",
+			"energy_value": 0.0,
+			"form": "RF_SOLID",
+			"resource_sink_points": 1572819712
 		},
 		"Desc_AlienDNACapsule_C": {
 			"category": "FGItemDescriptor",
@@ -2218,6 +2273,121 @@
 			},
 			"raw_sink_points_gain": -165184.0,
 			"sinkable_points_gain": -153184.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"Build_SpaceElevator_C-Phase-1": {
+			"classname": "Build_SpaceElevator_C-Phase-1",
+			"display_name": "Space Elevator (Phase 1)",
+			"global_limit": -1,
+			"ingredients": {
+				"Desc_SpaceElevatorPart_1_C": 50
+			},
+			"is_resource_proxy": false,
+			"manufacturing_duration": 1,
+			"overclockable": false,
+			"produced_in": [
+				"Build_SpaceElevator_C"
+			],
+			"products": {
+				"Build_SpaceElevator_C-Phase-1-Objective-Dummy": 1
+			},
+			"raw_sink_points_gain": 0.0,
+			"sinkable_points_gain": 0.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"Build_SpaceElevator_C-Phase-2": {
+			"classname": "Build_SpaceElevator_C-Phase-2",
+			"display_name": "Space Elevator (Phase 2)",
+			"global_limit": -1,
+			"ingredients": {
+				"Desc_SpaceElevatorPart_1_C": 1000,
+				"Desc_SpaceElevatorPart_2_C": 1000,
+				"Desc_SpaceElevatorPart_3_C": 100
+			},
+			"is_resource_proxy": false,
+			"manufacturing_duration": 1,
+			"overclockable": false,
+			"produced_in": [
+				"Build_SpaceElevator_C"
+			],
+			"products": {
+				"Build_SpaceElevator_C-Phase-2-Objective-Dummy": 1
+			},
+			"raw_sink_points_gain": 0.0,
+			"sinkable_points_gain": 0.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"Build_SpaceElevator_C-Phase-3": {
+			"classname": "Build_SpaceElevator_C-Phase-3",
+			"display_name": "Space Elevator (Phase 3)",
+			"global_limit": -1,
+			"ingredients": {
+				"Desc_SpaceElevatorPart_2_C": 2500,
+				"Desc_SpaceElevatorPart_4_C": 500,
+				"Desc_SpaceElevatorPart_5_C": 100
+			},
+			"is_resource_proxy": false,
+			"manufacturing_duration": 1,
+			"overclockable": false,
+			"produced_in": [
+				"Build_SpaceElevator_C"
+			],
+			"products": {
+				"Build_SpaceElevator_C-Phase-3-Objective-Dummy": 1
+			},
+			"raw_sink_points_gain": 0.0,
+			"sinkable_points_gain": 0.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"Build_SpaceElevator_C-Phase-4": {
+			"classname": "Build_SpaceElevator_C-Phase-4",
+			"display_name": "Space Elevator (Phase 4)",
+			"global_limit": -1,
+			"ingredients": {
+				"Desc_SpaceElevatorPart_6_C": 500,
+				"Desc_SpaceElevatorPart_7_C": 500,
+				"Desc_SpaceElevatorPart_8_C": 250,
+				"Desc_SpaceElevatorPart_9_C": 100
+			},
+			"is_resource_proxy": false,
+			"manufacturing_duration": 1,
+			"overclockable": false,
+			"produced_in": [
+				"Build_SpaceElevator_C"
+			],
+			"products": {
+				"Build_SpaceElevator_C-Phase-4-Objective-Dummy": 1
+			},
+			"raw_sink_points_gain": 0.0,
+			"sinkable_points_gain": 0.0,
+			"variable_power_consumption_constant": 0.0,
+			"variable_power_consumption_factor": 0.0
+		},
+		"Build_SpaceElevator_C-Phase-5": {
+			"classname": "Build_SpaceElevator_C-Phase-5",
+			"display_name": "Space Elevator (Phase 5)",
+			"global_limit": -1,
+			"ingredients": {
+				"Desc_SpaceElevatorPart_10_C": 1000,
+				"Desc_SpaceElevatorPart_11_C": 200,
+				"Desc_SpaceElevatorPart_12_C": 256,
+				"Desc_SpaceElevatorPart_9_C": 1000
+			},
+			"is_resource_proxy": false,
+			"manufacturing_duration": 1,
+			"overclockable": false,
+			"produced_in": [
+				"Build_SpaceElevator_C"
+			],
+			"products": {
+				"Build_SpaceElevator_C-Phase-5-Objective-Dummy": 1
+			},
+			"raw_sink_points_gain": 0.0,
+			"sinkable_points_gain": 0.0,
 			"variable_power_consumption_constant": 0.0,
 			"variable_power_consumption_factor": 0.0
 		},

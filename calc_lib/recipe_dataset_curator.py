@@ -58,8 +58,8 @@ class RecipeDatasetCurator(RecipeDataset):
 				display_name=d["mDisplayName"],
 				variable_power_consumption=("mEstimatedMininumPowerConsumption" in d),
 				power_production=float(d.get("mPowerProduction", 0)),
-				power_consumption=float(d["mPowerConsumption"]),
-				power_consumption_exponent=float(d["mPowerConsumptionExponent"]),
+				power_consumption=float(d.get("mPowerConsumption", 0)),
+				power_consumption_exponent=float(d.get("mPowerConsumptionExponent", 1)),
 				production_shard_slot_size=int(d.get("mProductionShardSlotSize", 0)),
 				production_shard_boost_multiplier=float(
 					d.get("mProductionShardBoostMultiplier", 0.0)),
@@ -232,9 +232,46 @@ class RecipeDatasetCurator(RecipeDataset):
 
 	def _add_resource_proxy_recipes(self, data: dict[str, dict[str]]) -> None:
 		# add resource extraction as 'recipes' to the recipe collection
+		self._add_space_elevator_proxy_recipes()
 		self._add_resource_node_proxy_recipes()
 		self._add_unrestrained_resource_proxy_recipes()
 		self._add_geothermal_proxy_recipes()
+		return
+
+	def _add_space_elevator_proxy_recipes(self) -> None:
+		produced_in = config.CURATOR_SPACE_ELEVATOR_PROXY_RECIPES["produced_in"]
+		space_elevator = self.buildings[produced_in]
+		for phase in config.CURATOR_SPACE_ELEVATOR_PROXY_RECIPES["phases"]:
+			# add dummy space elevator phase objects
+			objective_classname = ("{}-Phase-{}-Objective-Dummy").format(
+					produced_in, phase["phase"])
+			sink_points = 0
+			for itemclass, amount in phase["cost"].items():
+				sink_points += self.items[itemclass].resource_sink_points * amount
+
+			item = Item(
+				classname=objective_classname,
+				display_name=("{} (Phase {})").format(
+					space_elevator.display_name, phase["phase"]),
+				form="RF_SOLID",
+				resource_sink_points=sink_points,
+			)
+
+			self.add(item)
+
+			recipe = self.CuratedRecipe(
+				classname=("{}-Phase-{}").format(produced_in, phase["phase"]),
+				display_name=("{} (Phase {})").format(
+					space_elevator.display_name, phase["phase"]),
+				ingredients=phase["cost"].copy(),
+				products={objective_classname: 1},
+				manufacturing_duration=1,  # always 1
+				produced_in=[space_elevator.classname],
+				global_limit=-1,
+				overclockable=False,
+			)
+
+			self.add(recipe)
 		return
 
 	def _add_resource_node_proxy_recipes(self) -> None:
